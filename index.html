@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Вкусно покушать в кафе на М-10 - покушать на трассе Москва Питер - Кафе на 368км / ПолПути придорожный комплекс</title>
+
+    <meta name="keywords" content="М-10, м10, вкусно, покушать, кафе, москва, питер, есть, придорожный, сервис, еда, не дорого, " />
+
+    <meta name="description" content="ПолПути - комплекс придорожного сервиса на 368км по дороге из Москвы в Питер или из Питера в Москву на трассе М-10. У нас можно вкусно и не дорого покушать, отдохнуть, сходить в баню и сауну - выспаться и продолжить путь! Заезжайте к нам на ПолПути!" />
+
+    <meta name="metatags" content="polputi" />
+    <meta name="Robots" content="INDEX, FOLLOW" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="Author" content="Комплекс придорожного сервиса - Кафе ПОЛПУТИ" />
+    <meta property="og:title" content="Комплекс придорожного сервиса - Кафе ПОЛПУТИ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.polputi.com/" />
+    <meta property="og:image" content="http://www.polputi.com/polputi.jpg" />
+    <meta property="og:site_name" content="Комплекс придорожного сервиса - ПОЛПУТИ" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name='yandex-verification' content='5ace912bca180606' />
+    <meta name="yandex-verification" content="94fab47df968badd" />
+
+    <meta name='robots' content='noindex,follow' />
+
+    <link rel='stylesheet' id='rs-plugin-settings-css' href='css/settings.css' type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        .tp-caption a {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out
+        }
+
+        .tp-caption a:hover {
+            color: #ffa902
+        }
+    </style>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Kristi' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-layout.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/combined.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/custom-css.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato%3A100%2C200%2C300%2C400%2C600%2C700%2C800%2C900%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/kirki-styles.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive-css.css' type='text/css' media='all' />
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.revolution.min.js'></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            // CUSTOM AJAX CONTENT LOADING FUNCTION
+            var ajaxRevslider = function(obj) {
+
+                // obj.type : Post Type
+                // obj.id : ID of Content to Load
+                // obj.aspectratio : The Aspect Ratio of the Container / Media
+                // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+
+                var content = "";
+
+                data = {};
+
+                data.action = 'revslider_ajax_call_front';
+                data.client_action = 'get_slider_html';
+                data.token = '11bad55d5a';
+                data.type = obj.type;
+                data.id = obj.id;
+                data.aspectratio = obj.aspectratio;
+
+                // SYNC AJAX REQUEST
+                jQuery.ajax({
+                    type: "post",
+                    url: "#",
+                    dataType: 'json',
+                    data: data,
+                    async: false,
+                    success: function(ret, textStatus, XMLHttpRequest) {
+                        if (ret.success == true)
+                            content = ret.data;
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    }
+                });
+
+                // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                return content;
+            };
+
+            // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+            var ajaxRemoveRevslider = function(obj) {
+                return jQuery(obj.selector + " .rev_slider").revkill();
+            };
+
+            // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+            var extendessential = setInterval(function() {
+                if (jQuery.fn.tpessential != undefined) {
+                    clearInterval(extendessential);
+                    if (typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+                        jQuery.fn.tpessential.defaults.ajaxTypes.push({
+                            type: "revslider",
+                            func: ajaxRevslider,
+                            killfunc: ajaxRemoveRevslider,
+                            openAnimationSpeed: 0.3
+                        });
+                        // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+                        // func: the Function Name which is Called once the Item with the Post Type has been clicked
+                        // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+                        // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+                    }
+                }
+            }, 30);
+        });
+    </script>
+</head>
+
+<body class="home page page-template-default">
+    <input type="hidden" id="pp_menu_layout" name="pp_menu_layout" />
+    <input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" />
+    <input type="hidden" id="pp_enable_dragging" name="pp_enable_dragging" />
+    <input type="hidden" id="pp_ajax_search" name="pp_ajax_search" value="1" />
+    <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1" />
+    <input type="hidden" id="pp_topbar" name="pp_topbar" value="1" />
+    <input type="hidden" id="post_client_column" name="post_client_column" value="4" />
+    <input type="hidden" id="pp_back" name="pp_back" value="Back" />
+    <input type="hidden" id="pp_page_title_img_blur" name="pp_page_title_img_blur" value="1" />
+    <input type="hidden" id="tg_project_filterable_link" name="tg_project_filterable_link" />
+    <input type="hidden" id="pp_footer_style" name="pp_footer_style" value="4" />
+    <div class="mobile_menu_wrapper">
+        <a id="close_mobile_menu" href="javascript:;"><i class="fa fa-close"></i></a>
+        <form role="search" method="get" name="searchform" id="searchform" action="index.html#">
+            <div>
+                <input type="text" name="s" id="s" autocomplete="off" placeholder="Поиск..." />
+                <button> <i class="fa fa-search"></i> </button>
+            </div>
+            <div id="autocomplete"></div>
+        </form>
+
+        <div class="menu-side-menu-container">
+            <ul id="mobile_main_menu" class="mobile_main_nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="menu.html">Меню</a>
+                <li><a href="galery.html">Интерьер</a></li>
+                <li><a href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=" target="_blank">Схема проезда</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <a href="javascript:;" id="tg_sidemenu_reservation" class="button">Запрос</a>
+        <div class="page_content_wrapper">
+            <div class="sidebar_wrapper">
+                <div class="sidebar">
+                    <div class="content">
+                        <ul class="sidebar_widget">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="hasbg">
+
+        <div class="header_style_wrapper">
+            <div class="above_top_bar">
+                <div class="page_content_wrapper">
+                    <div class="social_wrapper">
+                        <ul>
+                            <li class="facebook"><a target="_blank" href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="twitter"><a target="_blank" href="index.html#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="flickr"><a target="_blank" title="Flickr" href="index.html#"><i class="fa fa-flickr"></i></a></li>
+                            <li class="youtube"><a target="_blank" title="Youtube" href="index.html#"><i class="fa fa-youtube"></i></a></li>
+                            <li class="google"><a target="_blank" title="Google+" href="index.html#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="pinterest"><a target="_blank" title="Pinterest" href="index.html#"><i class="fa fa-pinterest"></i></a></li>
+                            <li class="instagram"><a target="_blank" title="Instagram" href="index.html#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-top-menu-container">
+                        <ul id="top_menu" class="top_nav">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html">Меню</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://www.google.ru/maps/dir//Polputi,+368км+трассы+М-10+Москва+-+Санкт-Петербург,+Novgorodskaya+oblast',+175429/@57.9278123,33.5793882,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b9be161c849f1f:0x725145b6d621a874!2m2!1d33.5815769!2d57.9278123!3e0?dcr=0">Схема проезда Гугл.Карты</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">Схема проезда Яндекс.Карты</a></li>
+                        </ul>
+                    </div>
+                    <div class="extend_top_contact_info top_contact_info">
+                        <span id="top_contact_address"><i class="fa fa-map-marker"></i><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">368км трассы М-10</a></span>
+                        <span id="top_contact_number"><a href="tel:+79116220004"><i class="fa fa-phone"></i>+7 (911) 622-00-04</a></span></div>
+                </div>
+            </div>
+
+            <div class="top_bar hasbg" style="height: 96px;">
+                <div id="menu_wrapper">
+                    <div id="logo_normal" class="logo_container">
+                        <div class="logo_align">
+                            <a id="custom_logo" class="logo_wrapper hidden" href="index.html#" style="">
+                                <img src="images/bp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="logo_transparent" class="logo_container">
+                        <div class="logo_align">
+                            <a id="custom_logo_transparent" class="logo_wrapper default" href="index.html" style="">
+                                <img src="images/wp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="menu_buttons_container">
+
+                        <div class="menu_buttons_content">
+                            <a href="javascript:;" id="tg_reservation" class="button">Запрос</a>
+                            <a href="index.html#" id="mobile_nav_icon"></a>
+                        </div>
+                    </div>
+
+                    <div id="nav_wrapper">
+                        <div class="nav_wrapper_inner">
+                            <div id="menu_border_wrapper">
+                                <div class="menu-main-menu-container">
+                                    <ul id="main_menu" class="nav">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index.html" style="padding-top: 37px; padding-bottom: 38px;">Главная</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about.html" style="padding-top: 37px; padding-bottom: 38px;">О нас</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html" style="padding-top: 37px; padding-bottom: 38px;">Меню</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="galery.html" style="padding-top: 37px; padding-bottom: 38px;">Интерьер</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contacts.html" style="padding-top: 37px; padding-bottom: 38px;">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reservation_wrapper">
+            <div class="reservation_content">
+                <div class="reservation_form">
+                    <div class="reservation_form_wrapper"> <a id="reservation_cancel_btn" href="javascript:;"><i class="fa fa-close"></i></a>
+                        <h2 class="ppb_title"><span class="ppb_title_first" >Запрос</span>столик</h2>
+                        <div id="reponse_msg">
+                            <ul></ul>
+                        </div>
+                        <form id="tg_reservation_form" method="post">
+                            <input type="hidden" id="action" name="action" value="tg_reservation_mailer" />
+                            <div class="one_third">
+                                <label for="your_name">Имя*</label>
+                                <input id="your_name" name="your_name" type="text" class="required_field" />
+                            </div>
+                            <div class="one_third">
+                                <label for="email">Email*</label>
+                                <input id="email" name="email" type="text" class="required_field" />
+                            </div>
+                            <div class="one_third last">
+                                <label for="phone">Телефон*</label>
+                                <input id="phone" name="phone" type="text" class="required_field" />
+                            </div>
+                            <br class="clear" />
+                            <br/>
+                            <div class="one_third">
+                                <label for="date" class="hidden">Дата*</label>
+                                <input type="text" class="pp_date required_field" id="date" name="date" value="12/12/2015">
+                            </div>
+                            <div class="one_third">
+                                <label for="time">Время*</label>
+                                <input type="text" class="pp_time required_field" id="time" name="time" value="18:00" />
+                            </div>
+                            <div class="one_third last">
+                                <label for="seats">Количество персон*</label>
+                                <select id="seats" name="seats" class="required_field" style="width:99%">
+                                    <option value="1">1-2 персоны</option>
+                                    <option value="2">2-5 персон</option>
+                                    <option value="3">5-10 персон</option>
+                                    <option value="4">10-15 персон</option>
+                                    <option value="5">15-25 персон</option>
+                                    <option value="6">25-50 персон</option>
+                                </select>
+                            </div>
+                            <br class="clear" />
+                            <br/>
+                            <div class="one">
+                                <label for="message">Ваши пожелания</label>
+                                <textarea id="message" name="message" rows="7" cols="10"></textarea>
+                            </div>
+                            <br class="clear" />
+                            <br/>
+                            <div class="one">
+                                <p><input id="reservation_submit_btn" type="submit" value="Запрос" /></p>
+                            </div>
+                            <br class="clear" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax_overlay_header"></div>
+        </div>
+
+        <div class="ppb_wrapper ">
+            <div class="one fullwidth ">
+                <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container" style="background-color:#262626;padding:0px;">
+                    <div id="rev_slider_1_1" class="rev_slider fullscreenbanner" style="display:none;">
+                        <ul>
+                          <li>
+                              <img src="images/slide1_bg4.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                              <div class="tp-caption title-first-word tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="20" data-speed="300" data-start="450" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Добро пожаловать в</div>
+                              <div class="tp-caption title tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="80" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Кафе <strong>ПолПути</strong></div>
+                              <div class="tp-caption sub-title tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="150" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Самое вкусное кафе на трассе М-10
+                                  <br/>Быстрая бронь столов по телефону +7 (921) 022-63-38</div>
+                          </li>
+                          <li>
+                              <img src="images/slide1_bg2.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                              <div class="tp-caption title-first-word tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="20" data-speed="300" data-start="450" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Добро пожаловать в</div>
+                              <div class="tp-caption title tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="80" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Кафе <strong>ПолПути</strong></div>
+                              <div class="tp-caption sub-title tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="150" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Самое вкусное кафе на трассе М-10
+                                  <br/>Быстрая бронь столов по телефону +7 (921) 022-63-38</div>
+                          </li>
+                            <li>
+                                <img src="images/slide1_bg3.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption title-first-word tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="20" data-speed="300" data-start="450" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Добро пожаловать в</div>
+                                <div class="tp-caption title tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="80" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Кафе <strong>ПолПути</strong></div>
+                                <div class="tp-caption sub-title tp-fade tp-resizeme" data-x="90" data-y="center" data-voffset="150" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Самое вкусное кафе на трассе М-10
+                                    <br/>Быстрая бронь столов по телефону +7 (921) 022-63-38</div>
+                            </li>
+                        </ul>
+                        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                    </div>
+                    <style scoped>
+                        .tp-caption.title-first-word,
+                        .title-first-word {
+                            font-size: 60px;
+                            line-height: 50px;
+                            font-family: Kristi;
+                            color: #cfa670;
+                            text-decoration: none;
+                            text-shadow: none;
+                            background-color: transparent;
+                            border-width: 0px;
+                            border-color: rgb(0, 0, 0);
+                            border-style: none
+                        }
+
+                        .tp-caption.title,
+                        .title {
+                            font-size: 65px;
+                            font-weight: 300;
+                            font-family: 'Lato', 'Helvetica Neue', Arial, Verdana, sans-serif;
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                            text-shadow: none;
+                            text-transform: uppercase;
+                            letter-spacing: -3px;
+                            background-color: transparent;
+                            border-width: 0px;
+                            border-color: rgb(0, 0, 0);
+                            border-style: none
+                        }
+
+                        .tp-caption.sub-title,
+                        .sub-title {
+                            font-size: 20px;
+                            line-height: 24px;
+                            font-weight: 400;
+                            font-family: 'Lato', 'Helvetica Neue', Arial, Verdana, sans-serif;
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                            text-shadow: none;
+                            text-transform: uppercase;
+                            letter-spacing: -1px;
+                            background-color: transparent;
+                            border-width: 0px;
+                            border-color: rgb(0, 0, 0);
+                            border-style: none
+                        }
+                    </style>
+                    <script type="text/javascript">
+                        /******************************************
+                                                                        					-	PREPARE PLACEHOLDER FOR SLIDER	-
+                                                                        				******************************************/
+
+                        var setREVStartSize = function() {
+                            var tpopt = new Object();
+                            tpopt.startwidth = 1425;
+                            tpopt.startheight = 650;
+                            tpopt.container = jQuery('#rev_slider_1_1');
+                            tpopt.fullScreen = "on";
+                            tpopt.forceFullWidth = "on";
+
+                            tpopt.container.closest(".rev_slider_wrapper").css({
+                                height: tpopt.container.height()
+                            });
+                            tpopt.width = parseInt(tpopt.container.width(), 0);
+                            tpopt.height = parseInt(tpopt.container.height(), 0);
+                            tpopt.bw = tpopt.width / tpopt.startwidth;
+                            tpopt.bh = tpopt.height / tpopt.startheight;
+                            if (tpopt.bh > tpopt.bw) tpopt.bh = tpopt.bw;
+                            if (tpopt.bh < tpopt.bw) tpopt.bw = tpopt.bh;
+                            if (tpopt.bw < tpopt.bh) tpopt.bh = tpopt.bw;
+                            if (tpopt.bh > 1) {
+                                tpopt.bw = 1;
+                                tpopt.bh = 1
+                            }
+                            if (tpopt.bw > 1) {
+                                tpopt.bw = 1;
+                                tpopt.bh = 1
+                            }
+                            tpopt.height = Math.round(tpopt.startheight * (tpopt.width / tpopt.startwidth));
+                            if (tpopt.height > tpopt.startheight && tpopt.autoHeight != "on") tpopt.height = tpopt.startheight;
+                            if (tpopt.fullScreen == "on") {
+                                tpopt.height = tpopt.bw * tpopt.startheight;
+                                var cow = tpopt.container.parent().width();
+                                var coh = jQuery(window).height();
+                                if (tpopt.fullScreenOffsetContainer != undefined) {
+                                    try {
+                                        var offcontainers = tpopt.fullScreenOffsetContainer.split(",");
+                                        jQuery.each(offcontainers, function(e, t) {
+                                            coh = coh - jQuery(t).outerHeight(true);
+                                            if (coh < tpopt.minFullScreenHeight) coh = tpopt.minFullScreenHeight
+                                        })
+                                    } catch (e) {}
+                                }
+                                tpopt.container.parent().height(coh);
+                                tpopt.container.height(coh);
+                                tpopt.container.closest(".rev_slider_wrapper").height(coh);
+                                tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);
+                                tpopt.container.css({
+                                    height: "100%"
+                                });
+                                tpopt.height = coh;
+                            } else {
+                                tpopt.container.height(tpopt.height);
+                                tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);
+                                tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);
+                            }
+                        };
+
+                        /* CALL PLACEHOLDER */
+                        setREVStartSize();
+
+                        var tpj = jQuery;
+                        tpj.noConflict();
+                        var revapi1;
+
+                        tpj(document).ready(function() {
+
+                            if (tpj('#rev_slider_1_1').revolution == undefined) {
+                                revslider_showDoubleJqueryError('#rev_slider_1_1');
+                            } else {
+                                revapi1 = tpj('#rev_slider_1_1').show().revolution({
+                                    dottedOverlay: "none",
+                                    delay: 7000,
+                                    startwidth: 1425,
+                                    startheight: 650,
+                                    hideThumbs: 200,
+
+                                    thumbWidth: 100,
+                                    thumbHeight: 50,
+                                    thumbAmount: 1,
+
+                                    simplifyAll: "off",
+
+                                    navigationType: "none",
+                                    navigationArrows: "none",
+                                    navigationStyle: "custom",
+
+                                    touchenabled: "on",
+                                    onHoverStop: "off",
+                                    nextSlideOnWindowFocus: "off",
+
+                                    swipe_threshold: 75,
+                                    swipe_min_touches: 1,
+                                    drag_block_vertical: false,
+
+                                    keyboardNavigation: "off",
+
+                                    navigationHAlign: "center",
+                                    navigationVAlign: "bottom",
+                                    navigationHOffset: 0,
+                                    navigationVOffset: 20,
+
+                                    soloArrowLeftHalign: "left",
+                                    soloArrowLeftValign: "center",
+                                    soloArrowLeftHOffset: 20,
+                                    soloArrowLeftVOffset: 0,
+
+                                    soloArrowRightHalign: "right",
+                                    soloArrowRightValign: "center",
+                                    soloArrowRightHOffset: 20,
+                                    soloArrowRightVOffset: 0,
+
+                                    shadow: 0,
+                                    fullWidth: "off",
+                                    fullScreen: "on",
+
+                                    spinner: "spinner3",
+
+                                    stopLoop: "off",
+                                    stopAfterLoops: 0,
+                                    stopAtSlide: 1,
+
+                                    shuffle: "off",
+
+                                    forceFullWidth: "on",
+                                    fullScreenAlignForce: "off",
+                                    minFullScreenHeight: "",
+                                    hideTimerBar: "on",
+                                    hideThumbsOnMobile: "off",
+                                    hideNavDelayOnMobile: 1500,
+                                    hideBulletsOnMobile: "off",
+                                    hideArrowsOnMobile: "off",
+                                    hideThumbsUnderResolution: 0,
+
+                                    fullScreenOffsetContainer: "",
+                                    fullScreenOffset: "",
+                                    hideSliderAtLimit: 0,
+                                    hideCaptionAtLimit: 0,
+                                    hideAllCaptionAtLilmit: 0,
+                                    startWithSlide: 0
+                                });
+
+                            }
+                        }); /*ready*/
+                    </script>
+                    <style type="text/css">
+                        #rev_slider_1_1_wrapper .tp-loader.spinner3 div {
+                            background-color: #444444 !important;
+                        }
+                    </style>
+
+                </div>
+            </div>
+
+            <div class="one withsmallpadding ppb_text" style="text-align:center;padding-bottom:0 !important;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div style="margin:auto;width:100%">
+                                <div style="font-size:20px;text-transform:uppercase;font-weight:300;">Мы мечтали создать вкусную, домашнюю и не дорогую кухню - у нас это получилось!</div>
+                                <div class="post_detail">Основатель комплекса Дмитрий Корнеев</div>
+                                <p><span style="font-family:Kristi;font-size:30px;font-weight:600;">Dmitry Korneev</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="one" style="padding: 50px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll_image" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/about.jpg" class="img_frame"><img src="images/about.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="one_half last parallax_scroll" style="width:40%;position:absolute;right:90px;background:#ffffff;padding:40px;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title">
+								<span class="ppb_title_first" >Добро пожаловать в</span>Кафе ПолПути!
+							</h2>
+                                <div class="ppb_subtitle">
+Вы проголодались? Устали в дальней дороге? </div>
+                                <div class="page_header_sep left"></div>
+                                Тогда дорожный комплекс "Полпути" ждет вас!<br />
+  Здесь вы сможете отдохнуть в приятной обстановке, отведать любимые блюда русской кухни и насладиться атмосферой домашнего уюта. Для вас работают душ и сауна, в нашем магазине вы сможете найти все необходимое в дороге, а ваш ребенок будет рад провести время в детском уголке.
+</div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider one">&nbsp;</div>
+            <div class="parallax title" data-image="images/best_eats.jpg" data-width="1800" data-height="1200" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title">
+					<span class="ppb_title_first" >Лучшие Блюда</span> для вас
+				</h2>
+                </div>
+            </div>
+
+            <div class="ppb_portfolio one nopadding " style="padding:0px 0 0px 0;">
+                <div class="page_content_wrapper fullwidth">
+                    <div class="portfolio_filter_wrapper four_cols gallery portfolio-content section content clearfix">
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated1">
+                                <a data-title="" href="images/content/menu_litle_24.jpg" class="fancy-gallery"><img src="images/content/menu_litle_24.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3190" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Стейк форели</span> <span class="menu_dots"></span> <span class="menu_price">240 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/200</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated2">
+                                <a data-title="" href="images/content/menu_litle_14.jpg" class="fancy-gallery"><img src="images/content/menu_litle_14.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3191" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Шашлык из свиной шеи</span> <span class="menu_dots"></span> <span class="menu_price">220 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/180</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated3">
+                                <a data-title="" href="images/content/menu_litle_22.jpg" class="fancy-gallery"><img src="images/content/menu_litle_22.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3192" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Свинина на косточке</span> <span class="menu_dots"></span> <span class="menu_price">198 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/180</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated4">
+                                <a data-title="" href="images/content/menu_litle_11.jpg" class="fancy-gallery"><img src="images/content/menu_litle_11.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3193" class="portfolio_desc portfolio4 filterable last">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Гуляш из говядины</span> <span class="menu_dots"></span> <span class="menu_price">140 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/100/60</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated5">
+                                <a data-title="" href="images/content/menu_litle_21.jpg" class="fancy-gallery"><img src="images/content/menu_litle_21.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3194" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Плов из свинины</span> <span class="menu_dots"></span> <span class="menu_price">140 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/300</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_12.jpg" class="fancy-gallery"><img src="images/content/menu_litle_12.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3195" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Поджарка свиная</span> <span class="menu_dots"></span> <span class="menu_price">136 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/100/60</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated1">
+                                <a data-title="" href="images/content/menu_litle_30.jpg" class="fancy-gallery"><img src="images/content/menu_litle_30.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3190" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Салат «Нежность»</span> <span class="menu_dots"></span> <span class="menu_price">89 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated2">
+                                <a data-title="" href="images/content/menu_litle_23.jpg" class="fancy-gallery"><img src="images/content/menu_litle_23.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3191" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Нарезка овощная</span> <span class="menu_dots"></span> <span class="menu_price">80 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax title" data-image="images/slide2_bg1.jpg" data-width="1200" data-height="800" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title">
+					<span class="ppb_title_first" >Наивкуснейшие</span>Первые и вторые блюда</h2>
+                </div>
+            </div>
+            <div class="divider one">&nbsp;</div>
+            <div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll_image" style="width:65%;">
+                                <div class="image_classic_frame expand">
+
+                                    <div class="image_wrapper">
+                                        <a href="images/best_eats.jpg" class="img_frame">
+                                            <img src="images/best_eats.jpg" alt="" class="portfolio_img" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="one_half last parallax_scroll" style="width:40%;position:absolute;right:90px;background:#ffffff;padding:40px;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_menu_title">Первые блюда</h2>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+									<span class="menu_title" style="background:#ffffff;">Шурпа из баранины</span>
+									<span class="menu_dots"></span>
+									<span class="menu_price" style="background:#ffffff;">160₽</span>
+							  </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+									<span class="menu_title" style="background:#ffffff;">Солянка сборная</span>
+									<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#ffffff;">125₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#ffffff;">Борщ</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#ffffff;">95₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#ffffff;">Суп грибной</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#ffffff;">75₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#ffffff;">Бульон куриный с лапшой</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#ffffff;">75₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider one">&nbsp;</div>
+            <div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:40px;z-index:2;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_menu_title">Вторые блюда</h2>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#fff;">Стейк форели</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#fff;">240₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/200</div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#fff;">Шашлык из свиной шеи</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#fff;">220₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/180</div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#fff;">Свинина на косточке</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#fff;">198₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/180</div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#fff;">Гуляш из говядины</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#fff;">140₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/100/60</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post">
+
+<span class="menu_title" style="background:#fff;">Плов из свинины</span>
+
+<span class="menu_dots"></span>
+
+<span class="menu_price" style="background:#fff;">140₽</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/300</div>
+                                </div>
+                            </div>
+                            <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/obed.jpg" class="img_frame"><img src="images/obed.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider one">&nbsp;</div>
+            <div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll_image" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/cafe_polputi.jpg" class="img_frame"><img src="images/cafe_polputi.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="one_half last parallax_scroll" style="width:40%;position:absolute;right:90px;background:#ffffff;padding:40px;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title"><span class="ppb_title_first" >Фотографии</span>в #ПулПути</h2>
+                                <div class="ppb_subtitle"></div>
+                                <div class="page_header_sep left"></div>
+                                При создании сети нашей главной целью стало логичное единение отличной еды, качественного сервиса и уюта. За основу приготовления блюд Шеф-повар взял самые лучшие техники, поварские секреты европейской кухни и дополнил их интернациональными мотивами.
+                                <br/>
+                                <br/>
+                                <br/>
+                                <a href="galery.html" class="button">Посмотреть Фотогалерею</a>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider one">&nbsp;</div>
+        </div>
+
+        <div class="footer_bar ">
+            <div id="footer_before_widget_text"></div>
+            <div id="footer">
+                <ul class="sidebar_widget four">
+                    <li id="text-13" class="widget widget_text">
+                        <div class="textwidget">
+                            <p><img src="images/wp.png" alt="" height="68" /></p>
+                            <p>Вкусно и по домашнему. Всегда свежие продукты и самые низкие цены. Заезжайте и убедитесь сами!
+                                <br/>
+                                <br/>
+                            </p>
+                            <div class="social_wrapper shortcode dark ">
+                                <ul>
+                                    <li class="twitter"><a target="_blank" title="Twitter" href="http://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="vk"><a target="_blank" title="VK" href="http://vk.com/#"><i class="fa fa-vk"></i></a></li>
+                                    <li class="Facebook"><a target="_blank" title="Facebook" href="http://Facebook.com/#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="instagram"><a target="_blank" title="Instagram" href="http://instagram.com/#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                    <li id="text-14" class="widget widget_text">
+                        <h2 class="widgettitle">Контакты</h2>
+                        <div class="textwidget">
+                            <p><i class="fa fa-map-marker marginright"></i>368км трассы М-10 Москва - Санкт-Петербург</p>
+                            <p><i class="fa fa-phone marginright"></i><a href="tel:+79116220004">+7 (911) 622-00-04</a></p>
+                            <p><i class="fa fa-globe marginright"></i>polputi.com</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br class="clear" />
+            <div class="footer_bar_wrapper ">
+                <div class="menu-footer-menu-container">
+                    <ul id="footer_menu" class="footer_nav">
+                        <li id="menu-item-4021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4021">
+                            <a href="index.html#">О нас</a>
+                        </li>
+                        <li id="menu-item-4023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4023">
+                            <a href="index.html#">Шеф повар</a>
+                        </li>
+                        <li id="menu-item-4022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4022">
+                            <a href="index.html#">Новости</a>
+                        </li>
+                        <li id="menu-item-4024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4024">
+                            <a href="index.html#">Страницы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="copyright">© Кафе на ПолПути от Питера до Москвы.<br /><a href="https://a5am.ru/">сайт сделан в креативном агентстве - Пять Утра</a></div>
+                <br class="clear" /> <a id="toTop"><i class="fa fa-angle-up"></i></a> </div>
+        </div>
+    </div>
+    <div id="overlay_background"></div>
+    <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter33012034 = new Ya.Metrika({ id:33012034, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/33012034" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+    <link rel='stylesheet' href='css/jquery.timepicker.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/datepicker.css' type='text/css' media='all' />
+    <script type='text/javascript' src='js/add-to-cart.min.js'></script>
+    <script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='js/woocommerce.min.js'></script>
+    <script type='text/javascript' src='js/jquery.cookie.min.js'></script>
+    <script type='text/javascript' src='js/cart-fragments.min.js'></script>
+    <script type='text/javascript' src='js/combined.js'></script>
+    <script type='text/javascript' src='js/core.min.js'></script>
+    <script type='text/javascript' src='js/datepicker.min.js'></script>
+    <script type='text/javascript' src='js/custom-date.js'></script>
+    <script type='text/javascript' src='js/jquery.timepicker.js'></script>
+    <script type='text/javascript' src='js/custom-time.js'></script>
+    <script type='text/javascript' src='js/jquery.validate.js'></script>
+    <script type='text/javascript' src='js/script-reservation-form.php'></script>
+    <script type='text/javascript' src='js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='js/script-demo.php'></script>
+    <script type='text/javascript' src='js/custom_onepage.js'></script>
+
+</body>
+
+</html>

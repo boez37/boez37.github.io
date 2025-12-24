@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>О кафе ПолПути</title>
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "http:\/\/s.w.org\/images\/core\/emoji\/72x72\/",
+            "ext": ".png",
+            "source": {
+                "concatemoji": "\/js\/wp-emoji-release.min.js"
+            }
+        };
+        ! function(a, b, c) {
+            function d(a) {
+                var c = b.createElement("canvas"),
+                    d = c.getContext && c.getContext("2d");
+                return d && d.fillText ? (d.textBaseline = "top", d.font = "600 32px Arial", "flag" === a ? (d.fillText(String.fromCharCode(55356, 56812, 55356, 56807), 0, 0), c.toDataURL().length > 3e3) : (d.fillText(String.fromCharCode(55357, 56835), 0, 0), 0 !== d.getImageData(16, 16, 1, 1).data[0])) : !1
+            }
+
+            function e(a) {
+                var c = b.createElement("script");
+                c.src = a, c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+            var f, g;
+            c.supports = {
+                simple: d("simple"),
+                flag: d("flag")
+            }, c.DOMReady = !1, c.readyCallback = function() {
+                c.DOMReady = !0
+            }, c.supports.simple && c.supports.flag || (g = function() {
+                c.readyCallback()
+            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function() {
+                "complete" === b.readyState && c.readyCallback()
+            })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' href='css/settings.css' type='text/css' media='all' />
+    <style type='text/css'>
+        .tp-caption a {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out
+        }
+
+        .tp-caption a:hover {
+            color: #ffa902
+        }
+    </style>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Kristi' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-layout.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/combined.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/custom-css.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato%3A100%2C200%2C300%2C400%2C600%2C700%2C800%2C900%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/kirki-styles.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive-css.css' type='text/css' media='all' />
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.revolution.min.js'></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            // CUSTOM AJAX CONTENT LOADING FUNCTION
+            var ajaxRevslider = function(obj) {
+
+                // obj.type : Post Type
+                // obj.id : ID of Content to Load
+                // obj.aspectratio : The Aspect Ratio of the Container / Media
+                // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+
+                var content = "";
+
+                data = {};
+
+                data.action = 'revslider_ajax_call_front';
+                data.client_action = 'get_slider_html';
+                data.token = 'e41d2033eb';
+                data.type = obj.type;
+                data.id = obj.id;
+                data.aspectratio = obj.aspectratio;
+
+                // SYNC AJAX REQUEST
+                jQuery.ajax({
+                    type: "post",
+                    url: "#",
+                    dataType: 'json',
+                    data: data,
+                    async: false,
+                    success: function(ret, textStatus, XMLHttpRequest) {
+                        if (ret.success == true)
+                            content = ret.data;
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    }
+                });
+
+                // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                return content;
+            };
+
+            // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+            var ajaxRemoveRevslider = function(obj) {
+                return jQuery(obj.selector + " .rev_slider").revkill();
+            };
+
+            // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+            var extendessential = setInterval(function() {
+                if (jQuery.fn.tpessential != undefined) {
+                    clearInterval(extendessential);
+                    if (typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+                        jQuery.fn.tpessential.defaults.ajaxTypes.push({
+                            type: "revslider",
+                            func: ajaxRevslider,
+                            killfunc: ajaxRemoveRevslider,
+                            openAnimationSpeed: 0.3
+                        });
+                        // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+                        // func: the Function Name which is Called once the Item with the Post Type has been clicked
+                        // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+                        // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+                    }
+                }
+            }, 30);
+        });
+    </script>
+</head>
+
+<body class="page page-template-default">
+  <input type="hidden" id="pp_menu_layout" name="pp_menu_layout" />
+  <input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" />
+  <input type="hidden" id="pp_enable_dragging" name="pp_enable_dragging" />
+  <input type="hidden" id="pp_ajax_search" name="pp_ajax_search" value="1" />
+  <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1" />
+  <input type="hidden" id="pp_topbar" name="pp_topbar" value="1" />
+  <input type="hidden" id="post_client_column" name="post_client_column" value="4" />
+  <input type="hidden" id="pp_back" name="pp_back" value="Back" />
+  <input type="hidden" id="pp_page_title_img_blur" name="pp_page_title_img_blur" value="1" />
+  <input type="hidden" id="tg_project_filterable_link" name="tg_project_filterable_link" />
+  <input type="hidden" id="pp_footer_style" name="pp_footer_style" value="4" />
+  <div class="mobile_menu_wrapper">
+      <a id="close_mobile_menu" href="javascript:;"><i class="fa fa-close"></i></a>
+      <form role="search" method="get" name="searchform" id="searchform" action="about.html#">
+          <div>
+              <input type="text" name="s" id="s" autocomplete="off" placeholder="Поиск..." />
+              <button> <i class="fa fa-search"></i> </button>
+          </div>
+          <div id="autocomplete"></div>
+      </form>
+
+      <div class="menu-side-menu-container">
+          <ul id="mobile_main_menu" class="mobile_main_nav">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="menu.html">Меню</a>
+              <li><a href="galery.html">Интерьер</a></li>
+              <li><a href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=" target="_blank">Схема проезда</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+      </div>
+      
+  </div>
+
+  <div id="wrapper" class="hasbg">
+
+      <div class="header_style_wrapper">
+          <div class="above_top_bar">
+              <div class="page_content_wrapper">
+                  
+                  <div class="menu-top-menu-container">
+                      <ul id="top_menu" class="top_nav">
+                          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html">Меню</a></li>
+                          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://www.google.ru/maps/dir//Polputi,+368км+трассы+М-10+Москва+-+Санкт-Петербург,+Novgorodskaya+oblast',+175429/@57.9278123,33.5793882,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b9be161c849f1f:0x725145b6d621a874!2m2!1d33.5815769!2d57.9278123!3e0?dcr=0">Схема проезда Гугл.Карты</a></li>
+                          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">Схема проезда Яндекс.Карты</a></li>
+                      </ul>
+                  </div>
+                  <div class="extend_top_contact_info top_contact_info">
+                      <span id="top_contact_address"><i class="fa fa-map-marker"></i><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">368км трассы М-10</a></span>
+                      <span id="top_contact_number"><a href="tel:+79116220004"><i class="fa fa-phone"></i>+7 (911) 622-00-04</a></span></div>
+              </div>
+          </div>
+
+          <div class="top_bar hasbg" style="height: 96px;">
+              <div id="menu_wrapper">
+                  <div id="logo_normal" class="logo_container">
+                      <div class="logo_align">
+                          <a id="custom_logo" class="logo_wrapper hidden" href="about.html#" style="">
+                              <img src="images/bp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                          </a>
+                      </div>
+                  </div>
+                  <div id="logo_transparent" class="logo_container">
+                      <div class="logo_align">
+                          <a id="custom_logo_transparent" class="logo_wrapper default" href="index.html" style="">
+                              <img src="images/wp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="menu_buttons_container">
+
+                      <div class="menu_buttons_content">
+                            <a href="about.html#" id="mobile_nav_icon"></a>
+                        </div>
+                  </div>
+
+                  <div id="nav_wrapper">
+                      <div class="nav_wrapper_inner">
+                          <div id="menu_border_wrapper">
+                              <div class="menu-main-menu-container">
+                                  <ul id="main_menu" class="nav">
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index.html" style="padding-top: 37px; padding-bottom: 38px;">Главная</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about.html" style="padding-top: 37px; padding-bottom: 38px;">О нас</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html" style="padding-top: 37px; padding-bottom: 38px;">Меню</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="galery.html" style="padding-top: 37px; padding-bottom: 38px;">Интерьер</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contacts.html" style="padding-top: 37px; padding-bottom: 38px;">Контакты</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      
+
+        <div id="page_caption" class="hasbg parallax">
+            <div class="parallax_overlay_header"></div>
+            <div id="bg_regular" style="background-image:url(images/slide1_bg4.jpg);"></div>
+            <div id="bg_blurred" style="background-image:url(images/slide1_bg4.jpg);"></div>
+            <div class="page_title_wrapper" data-stellar-ratio="1.3">
+                <div class="page_title_inner">
+                    <h1 class="withtopbar"> <span class="ppb_title_first" >о нашем</span>Комплексе </h1> </div>
+            </div>
+        </div>
+        <div class="ppb_wrapper hasbg withtopbar">
+
+ <!---
+          <div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                          <div class="standard_wrapper">
+                              <div class="page_content_wrapper">
+                                  <div class="inner">
+                                      <div class="one_half parallax_scroll_image" style="width:65%;">
+                                          <div class="image_classic_frame expand">
+                                              <div class="image_wrapper">
+                                                  <a href="images/cafe_polputi.jpg" class="img_frame"><img src="images/cafe_polputi.jpg" alt="" class="portfolio_img"></a>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="one_half last parallax_scroll" style="width: 40%; position: absolute; right: 90px; background-color: rgb(255, 255, 255); padding: 40px; display: block; transform: translate3d(0px, 47.70000000000002px, 0px); background-position: initial initial; background-repeat: initial initial;" data-stellar-ratio="1.3">
+                                          <h2 class="ppb_title"><span class="ppb_title_first">Кафе</span> ПолПути</h2>
+                                          <div class="ppb_subtitle"></div>
+                                          <div class="page_header_sep left"></div>
+                                          Это кафе с большим уютным залом, который поразит Вас гостеприимством и уютным интерьером, и предлагает большой выбор блюд, как из охлажденного мяса, так и из курицы, рыбы, баранины, а так же постное меню и комплексные обеды по 199рублей.
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <a href="/galery.html" class="button">Посмотреть Фотогалерею</a>
+                                      </div>
+                                      <br class="clear">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+            <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title"><span class="ppb_title_first">Вкусно </span>как дома!</h2>
+                                  <div class="page_header_sep left"></div>
+"Полпути" - это домашнее кафе во всех отношениях. Здесь вы сможете насладиться лучшими блюдами русской кухни из говядины, свинины, курицы и морепродуктов. Многообразие нашей кухни порадует вас: тут вы найдете все от борща до плова. Все наши блюда приготовлены из исключительно свежих продуктов и с искренней заботой о вас.</p>
+                                <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span></div>
+                            <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/about.jpg" class="img_frame"><img src="images/about.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll_image" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/about/about_1.jpg" class="img_frame"><img src="images/about/about_1.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="one_half last parallax_scroll" style="width:40%;position:absolute;right:90px;background:#fff;padding:50px;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title"><span class="ppb_title_first" >Детский уголок</span>(мороженное)</h2>
+                                <div class="ppb_subtitle">В нашем детском уголке никто не будет скучать!</div>
+                                <div class="page_header_sep left"></div>Вы сможете оставить вашего ребенка в нашем детском уголке. Даем вам слово, он не заскучает! В награду за хорошее поведение вы сможете угостить своего сорванца мороженым.
+</div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider one">&nbsp;</div>
+
+
+            <div class="ppb_wrapper hasbg withtopbar">
+                <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                    <div class="standard_wrapper">
+                        <div class="page_content_wrapper">
+                            <div class="inner">
+                                <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                    <h2 class="ppb_title"><span class="ppb_title_first">Вкусно </span>как дома!</h2>
+                                    <div class="page_header_sep left"></div>В богатом банкетном меню гости найдут все самые популярные деликатесы от кабанчика и осетрины до стерляди и севрюжки. Это потрясающее гастрономическое великолепие гармонично сочетается с национальными и всеми любимыми украинскими варениками и несколькими видами украинского борща.</p>
+                                    <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitriy Korneev</span></div>
+                                <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                    <div class="image_classic_frame expand">
+                                        <div class="image_wrapper">
+                                            <a href="images/galery/banner_4.jpg" class="img_frame"><img src="images/galery/banner_4.jpg" alt="" class="portfolio_img" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br class="clear" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                    <div class="standard_wrapper">
+                        <div class="page_content_wrapper">
+                            <div class="inner">
+                                <div class="one_half parallax_scroll_image" style="width:65%;">
+                                    <div class="image_classic_frame expand">
+                                        <div class="image_wrapper">
+                                            <a href="images/galery/banner_5.jpg" class="img_frame"><img src="images/galery/banner_5.jpg" alt="" class="portfolio_img" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one_half last parallax_scroll" style="width:40%;position:absolute;right:90px;background:#fff;padding:50px;" data-stellar-ratio="1.3">
+                                    <h2 class="ppb_title"><span class="ppb_title_first" >Детская</span>комната</h2>
+                                    <div class="ppb_subtitle">В нашем детском уголке никто не будет скучать!</div>
+                                    <div class="page_header_sep left"></div>Какими должны быть лучшие детские комнаты для детей? У каждого родителя – свое мнение по этому поводу. Все сходятся, пожалуй, в одном - готовая детская комната должна быть безопасной. И еще она должна нравиться малышу. Вот почему оформление детской комнаты в каждом случае индивидуально.</div>
+                                <br class="clear" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider one">&nbsp;</div>
+
+
+
+                <div class="ppb_wrapper hasbg withtopbar">
+                    <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                        <div class="standard_wrapper">
+                            <div class="page_content_wrapper">
+                                <div class="inner">
+                                    <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                        <h2 class="ppb_title"><span class="ppb_title_first">Вкусно </span>как дома!</h2>
+                                        <div class="page_header_sep left"></div>В богатом банкетном меню гости найдут все самые популярные деликатесы от кабанчика и осетрины до стерляди и севрюжки. Это потрясающее гастрономическое великолепие гармонично сочетается с национальными и всеми любимыми украинскими варениками и несколькими видами украинского борща.</p>
+                                        <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitriy Korneev</span></div>
+                                    <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                        <div class="image_classic_frame expand">
+                                            <div class="image_wrapper">
+                                                <a href="images/galery/banner_2.jpg" class="img_frame"><img src="images/galery/banner_2.jpg" alt="" class="portfolio_img" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br class="clear" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                        <div class="standard_wrapper">
+                            <div class="page_content_wrapper">
+                                <div class="inner">
+                                    <div class="one_half parallax_scroll_image" style="width:65%;">
+                                        <div class="image_classic_frame expand">
+                                            <div class="image_wrapper">
+                                                <a href="images/galery/banner_7.jpg" class="img_frame"><img src="images/galery/banner_7.jpg" alt="" class="portfolio_img" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="one_half last parallax_scroll" style="width:40%;position:absolute;right:90px;background:#fff;padding:50px;" data-stellar-ratio="1.3">
+                                        <h2 class="ppb_title"><span class="ppb_title_first" >Детская</span>комната</h2>
+                                        <div class="ppb_subtitle">В нашем детском уголке никто не будет скучать!</div>
+                                        <div class="page_header_sep left"></div>Какими должны быть лучшие детские комнаты для детей? У каждого родителя – свое мнение по этому поводу. Все сходятся, пожалуй, в одном - готовая детская комната должна быть безопасной. И еще она должна нравиться малышу. Вот почему оформление детской комнаты в каждом случае индивидуально.</div>
+                                    <br class="clear" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider one">&nbsp;</div>
+
+
+                    <div class="ppb_wrapper hasbg withtopbar">
+                        <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                            <div class="standard_wrapper">
+                                <div class="page_content_wrapper">
+                                    <div class="inner">
+                                        <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                            <h2 class="ppb_title"><span class="ppb_title_first">Вкусно </span>как дома!</h2>
+                                            <div class="page_header_sep left"></div>В богатом банкетном меню гости найдут все самые популярные деликатесы от кабанчика и осетрины до стерляди и севрюжки. Это потрясающее гастрономическое великолепие гармонично сочетается с национальными и всеми любимыми украинскими варениками и несколькими видами украинского борща.</p>
+                                            <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitriy Korneev</span></div>
+                                        <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                            <div class="image_classic_frame expand">
+                                                <div class="image_wrapper">
+                                                    <a href="images/galery/banner_8.jpg" class="img_frame"><img src="images/galery/banner_8.jpg" alt="" class="portfolio_img" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br class="clear" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                            <div class="standard_wrapper">
+                                <div class="page_content_wrapper">
+                                    <div class="inner">
+                                        <div class="one_half parallax_scroll_image" style="width:65%;">
+                                            <div class="image_classic_frame expand">
+                                                <div class="image_wrapper">
+                                                    <a href="images/galery/banner_1.jpg" class="img_frame"><img src="images/galery/banner_1.jpg" alt="" class="portfolio_img" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="one_half last parallax_scroll" style="width:40%;position:absolute;right:90px;background:#fff;padding:50px;" data-stellar-ratio="1.3">
+                                            <h2 class="ppb_title"><span class="ppb_title_first" >Детская</span>комната</h2>
+                                            <div class="ppb_subtitle">В нашем детском уголке никто не будет скучать!</div>
+                                            <div class="page_header_sep left"></div>Какими должны быть лучшие детские комнаты для детей? У каждого родителя – свое мнение по этому поводу. Все сходятся, пожалуй, в одном - готовая детская комната должна быть безопасной. И еще она должна нравиться малышу. Вот почему оформление детской комнаты в каждом случае индивидуально.</div>
+                                        <br class="clear" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider one">&nbsp;</div>
+
+
+                        -->
+
+           				<div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                          <div class="standard_wrapper">
+                              <div class="page_content_wrapper">
+                                  <div class="inner">
+                                      <div class="one_half parallax_scroll_image" style="width:65%;">
+                                          <div class="image_classic_frame expand">
+                                              <div class="image_wrapper">
+                                                  <a href="images/about/about_cook.jpg" class="img_frame"><img src="images/about/about_cook.jpg" alt="" class="portfolio_img"></a>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="one_half last parallax_scroll" style="width: 40%; position: absolute; right: 90px; background-color: rgb(255, 255, 255); padding: 40px; display: block; transform: translate3d(0px, 47.70000000000002px, 0px); background-position: initial initial; background-repeat: initial initial;" data-stellar-ratio="1.3">
+                                          <h2 class="ppb_title"><span class="ppb_title_first">Полноценная кухня</span> </h2>
+                                          <div class="ppb_subtitle"></div>
+                                          <div class="page_header_sep left"></div>
+                                          Вас покорит разнообразие блюд нашей кухни. Супы, салаты, жаркое, холодные закуски, выпечка ... и это еще не все! Вы сможете отведать <b>ароматного шашлыка</b>, который будет приготовлен на ваших глазах.
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <!-- <a href="/galery.html" class="button">Посмотреть Фотогалерею</a>-->
+                                      </div>
+                                      <br class="clear">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                          <div class="standard_wrapper">
+                              <div class="page_content_wrapper">
+                                  <div class="inner">
+                                      <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                          <h2 class="ppb_title"><span class="ppb_title_first">Кофе с собой!</span></h2>
+                                            <div class="page_header_sep left"></div>
+          Американо, эспрессо, капучино... Любой из этих чудесных напитков мы приготовим для вас из натуральных кофейных зерен. Отдохните в «Полпути» за чашечкой ароматного кофе.</p>
+                                          <!-- <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span>--></div>
+                                      <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                          <div class="image_classic_frame expand">
+                                              <div class="image_wrapper">
+                                                  <a href="images/about/about_cofe.jpg" class="img_frame"><img src="images/about/about_cofe.jpg" alt="" class="portfolio_img" /></a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <br class="clear" />
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                                            				<div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                                                <div class="standard_wrapper">
+                                                    <div class="page_content_wrapper">
+                                                        <div class="inner">
+                                                            <div class="one_half parallax_scroll_image" style="width:65%;">
+                                                                <div class="image_classic_frame expand">
+                                                                    <div class="image_wrapper">
+                                                                        <a href="images/about/about_veranda.jpg" class="img_frame"><img src="images/about/about_veranda.jpg" alt="" class="portfolio_img"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="one_half last parallax_scroll" style="width: 40%; position: absolute; right: 90px; background-color: rgb(255, 255, 255); padding: 40px; display: block; transform: translate3d(0px, 47.70000000000002px, 0px); background-position: initial initial; background-repeat: initial initial;" data-stellar-ratio="1.3">
+                                                                <h2 class="ppb_title"><span class="ppb_title_first">Летняя</span>  веранда</h2>
+                                                                <div class="ppb_subtitle"></div>
+                                                                <div class="page_header_sep left"></div>
+                                                                Порадует гостей обедами на свежем воздухе .
+                                                                <br>
+                                                                <br>
+                                                                <br>
+                                                                <!-- <a href="/galery.html" class="button">Посмотреть Фотогалерею</a>-->
+                                                            </div>
+                                                            <br class="clear">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                  <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                                      <div class="standard_wrapper">
+                                          <div class="page_content_wrapper">
+                                              <div class="inner">
+                                                  <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                                      <h2 class="ppb_title"><span class="ppb_title_first">Для детей </span>Детский уголок</h2>
+                                                        <div class="page_header_sep left"></div>
+                      Вы сможете оставить вашего ребенка в нашем детском уголке. Даем вам слово, он не заскучает! В награду за хорошее поведение вы сможете угостить своего сорванца мороженым.</p>
+                                                      <!-- <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span>--></div>
+                                                  <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                                      <div class="image_classic_frame expand">
+                                                          <div class="image_wrapper">
+                                                              <a href="images/about.jpg" class="img_frame"><img src="images/about/about_1.jpg" alt="" class="portfolio_img" /></a>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <br class="clear" />
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                                      <div class="standard_wrapper">
+                                          <div class="page_content_wrapper">
+                                              <div class="inner">
+                                                  <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                                      <h2 class="ppb_title"><span class="ppb_title_first">Для отдыха </span>Отель</h2>
+                                                        <div class="page_header_sep left"></div>
+                      Путешествие — это не только движение, но и моменты покоя. В отеле «Полпути» мы создали атмосферу тихого уюта, где каждая деталь нацелена на ваш комфорт. Ваша остановка в пути. Ваш уголок тишины. Отель «Полпути».
+                      </p>
+                                                      <!-- <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span>--></div>
+                                                  <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                                      <div class="image_classic_frame expand">
+                                                          <div class="image_wrapper">
+                                                              <a href="images/about/about_eng.WEBP" class="img_frame"><img src="images/about/about_eng.WEBP" alt="" class="portfolio_img" /></a>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <br class="clear" />
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+
+
+            <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title"><span class="ppb_title_first">Разнообразние бара</span></h2>
+                                  <div class="page_header_sep left"></div>Захотелось выпить минеральной воды, содовой, бутылочку пива? Или чего покрепче? Наш бар к вашим услугам</p>
+                                <!-- <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span>--></div>
+                            <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/about/about_bar.png" class="img_frame"><img src="images/about/about_bar.png" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+                                  <div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                                      <div class="standard_wrapper">
+                                          <div class="page_content_wrapper">
+                                              <div class="inner">
+                                                  <div class="one_half parallax_scroll_image" style="width:65%;">
+                                                      <div class="image_classic_frame expand">
+                                                          <div class="image_wrapper">
+                                                              <a href="images/about/about_bathroom.jpg" class="img_frame"><img src="images/about/about_bathroom.jpg" alt="" class="portfolio_img"></a>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+
+                                                  <div class="one_half last parallax_scroll" style="width: 40%; position: absolute; right: 90px; background-color: rgb(255, 255, 255); padding: 40px; display: block; transform: translate3d(0px, 47.70000000000002px, 0px); background-position: initial initial; background-repeat: initial initial;" data-stellar-ratio="1.3">
+                                                      <h2 class="ppb_title"><span class="ppb_title_first">Сауна / Душ</span></h2>
+                                                      <div class="ppb_subtitle"></div>
+                                                      <div class="page_header_sep left"></div>
+                                                      Устали? Расслабьтесь в дороге! У нас вы сможете принять душ и попариться в чудесной сауне.
+
+                                                      <br>
+                                                      <br>
+                                                      <br>
+                                                      <!-- <a href="/galery.html" class="button">Посмотреть Фотогалерею</a>-->
+                                                  </div>
+                                                  <br class="clear">
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      				
+
+           
+
+
+
+
+
+
+
+
+
+                      				<div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                          <div class="standard_wrapper">
+                              <div class="page_content_wrapper">
+                                  <div class="inner">
+                                      <div class="one_half parallax_scroll_image" style="width:65%;">
+                                          <div class="image_classic_frame expand">
+                                              <div class="image_wrapper">
+                                                  <a href="images/about/about_wifi.jpg" class="img_frame"><img src="images/about/about_wifi.jpg" alt="" class="portfolio_img"></a>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="one_half last parallax_scroll" style="width: 40%; position: absolute; right: 90px; background-color: rgb(255, 255, 255); padding: 40px; display: block; transform: translate3d(0px, 47.70000000000002px, 0px); background-position: initial initial; background-repeat: initial initial;" data-stellar-ratio="1.3">
+                                          <h2 class="ppb_title"><span class="ppb_title_first">Бесплатный </span> Wi-Fi</h2>
+                                          <div class="ppb_subtitle"></div>
+                                          <div class="page_header_sep left"></div>
+                                          Дорога - не повод оставлять дела на самотек. У нас вы можете бесплатно подключиться к сети WiFi и по-прежнему оставаться в курсе событий.
+
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <!-- <a href="/galery.html" class="button">Посмотреть Фотогалерею</a>-->
+                                      </div>
+                                      <br class="clear">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+                      				<div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                          <div class="standard_wrapper">
+                              <div class="page_content_wrapper">
+                                  <div class="inner">
+                                      <div class="one_half parallax_scroll_image" style="width:65%;">
+                                          <div class="image_classic_frame expand">
+                                              <div class="image_wrapper">
+                                                  <a href="images/about/about_mag.jpg" class="img_frame"><img src="images/about/about_mag.jpg" alt="" class="portfolio_img"></a>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="one_half last parallax_scroll" style="width: 40%; position: absolute; right: 90px; background-color: rgb(255, 255, 255); padding: 40px; display: block; transform: translate3d(0px, 47.70000000000002px, 0px); background-position: initial initial; background-repeat: initial initial;" data-stellar-ratio="1.3">
+                                          <h2 class="ppb_title"><span class="ppb_title_first">Магазин</span> ПолПути</h2>
+                                          <div class="ppb_subtitle">напитки, пиво, одежда, обувь, парфюмерия, сувениры ..Широкий ассортимент!</div>
+                                          <div class="page_header_sep left"></div>
+                                          Вам срочно понадобилась одежда? Обувь? Продукты? Или, быть может, вы хотите захватить сувенир по дороге? Наш магазин обеспечит вас всем необходимым.
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <!-- <a href="/galery.html" class="button">Посмотреть Фотогалерею</a>-->
+                                      </div>
+                                      <br class="clear">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+
+
+            <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title"><span class="ppb_title_first">Прачечная и сушилка </span> глажка </h2>
+                                  <div class="page_header_sep left"></div>
+Дорога - не повод перестать заботиться о своем внешнем виде. У нас вы сможете воспользоваться услугами прачечной а так же высушить и погладить свои вещи.
+</p>
+                                <!-- <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span>--></div>
+                            <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/about.jpg" class="img_frame"><img src="images/about/about_stirka.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+                      				<div class="one" style="padding: 70px 0 70px 0 !important;position:relative;padding:40px 0 40px 0;">
+                          <div class="standard_wrapper">
+                              <div class="page_content_wrapper">
+                                  <div class="inner">
+                                      <div class="one_half parallax_scroll_image" style="width:65%;">
+                                          <div class="image_classic_frame expand">
+                                              <div class="image_wrapper">
+                                                  <a href="images/about/about_tualet.jpg" class="img_frame"><img src="images/about/about_tualet.jpg" alt="" class="portfolio_img"></a>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="one_half last parallax_scroll" style="width: 40%; position: absolute; right: 90px; background-color: rgb(255, 255, 255); padding: 40px; display: block; transform: translate3d(0px, 47.70000000000002px, 0px); background-position: initial initial; background-repeat: initial initial;" data-stellar-ratio="1.3">
+                                          <h2 class="ppb_title"><span class="ppb_title_first">Бесплатный</span> туалет</h2>
+                                          <div class="ppb_subtitle"></div>
+                                          <div class="page_header_sep left"></div>
+                                          Для всех посетителей нашего комплекса работает бесплатный туалет.
+
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <!-- <a href="/galery.html" class="button">Посмотреть Фотогалерею</a>-->
+                                      </div>
+                                      <br class="clear">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+            <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title"><span class="ppb_title_first">Охраняемая стоянка </span> </h2>
+                                  <div class="page_header_sep left"></div>
+Мы гарантируем безопасность вашего транспорта! Охраняемая платная стоянка для вашего автомобиля работает 24 часа в сутки 7 дней в неделю. Стоимость услуг вас приятно удивит. (180 р.)
+</p>
+                                <!-- <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span>--></div>
+                            <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/about/about_stoyanka.jpg" class="img_frame"><img src="images/about/about_stoyanka.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+                      				
+
+            <div class="one" style="position:relative;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div class="one_half parallax_scroll" style="width:40%;position:absolute;left:90px;background:#fff;padding:50px;z-index:2;block !important;" data-stellar-ratio="1.3">
+                                <h2 class="ppb_title"><span class="ppb_title_first">Шиномонтаж </span></h2>
+                                  <div class="page_header_sep left"></div>
+Поломка в пути - обычное, хоть и не слишком приятное дело. Мы предусмотрели и это. На территории комплекса «Полпути» работает шиномонтаж.
+</p>
+                                <!-- <p><span style="font-family:Kristi;font-size:40px;font-weight:600;">Dmitry Korneev</span>--></div>
+                            <div class="one_half parallax_scroll_image last" style="width:65%;">
+                                <div class="image_classic_frame expand">
+                                    <div class="image_wrapper">
+                                        <a href="images/about/about_shino.jpg" class="img_frame"><img src="images/about/about_shino.jpg" alt="" class="portfolio_img" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="parallax title" data-image="images/slide1_bg5.jpg" data-width="1500" data-height="998" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Желаете забронировать</span>столик?</h2></div>
+            </div>
+            <div class="one withsmallpadding ppb_text" style="padding-top: 30px !important;padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div style="margin:auto;width:100%;text-align:center;">
+                                <p>Уведомить о Вашем скором приезде, можно так же по
+                                    <br/><a href="tel:+7(911)622-00-04"><i class="fa fa-phone"></i>+7 (911) 622-00-04</a>
+                                    <br/>
+                                    <br/>
+                                </p>
+                                <form name="open_table_form" id="open_table_form" target="_blank" method="POST" action="https://secure.opentable.com/ism/interim.aspx">
+                                    <input type="hidden" name="RestaurantID" value="100342">
+                                    <input type="hidden" name="txtDateFormat" value="MM/dd/yyyy">
+                                    
+                                    
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bar ">
+            <div id="footer_before_widget_text"></div>
+            <div id="footer">
+                <ul class="sidebar_widget four">
+                    <li id="text-13" class="widget widget_text">
+                        <div class="textwidget">
+													<p><img src="images/wp.png" alt="" height="68" /></p>
+													<p>Вкусно и по домашнему. Всегда свежие продукты и самые низкие цены. Заезжайте и убедитесь сами!
+															<br/>
+															<br/>
+													</p>
+                           
+                        </div>
+                    </li>
+										
+										<li id="custom_flickr-9" class="widget Custom_Flickr">
+                     
+                        <ul class="flickr">
+                            
+                        <br class="clear" />
+                    </li>
+										<li id="text-14" class="widget widget_text">
+                        <h2 class="widgettitle">Контакты</h2>
+                        <div class="textwidget">
+                            <p><i class="fa fa-map-marker marginright"></i>368км трассы М-10 Москва - Санкт-Петербург</p>
+                            <p><i class="fa fa-phone marginright"></i><a href="tel:+7(911)622-00-04">+7 (911) 622-00-04</a></p>
+                            <p><i class="fa fa-globe marginright"></i>polputi.com</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br class="clear" />
+            <div class="footer_bar_wrapper ">
+                <div class="menu-footer-menu-container">
+									<ul id="footer_menu" class="footer_nav">
+											<li id="menu-item-4021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4021">
+													<a href="about.html#">О нас</a>
+											</li>
+											<li id="menu-item-4023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4023">
+													<a href="about.html#">Шеф повар</a>
+											</li>
+											<li id="menu-item-4022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4022">
+													<a href="about.html#">Новости</a>
+											</li>
+											<li id="menu-item-4024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4024">
+													<a href="about.html#">Страницы</a>
+											</li>
+									</ul>
+                </div>
+                <div id="copyright">© Кафе на ПолПути от Питера до Москвы.</div>
+                <br class="clear" /> <a id="toTop"><i class="fa fa-angle-up"></i></a> </div>
+        </div>
+    </div>
+    <div id="overlay_background"></div>
+
+    <link rel='stylesheet' id='jquery.timepicker-css' href='css/jquery.timepicker.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='datepicker-css' href='css/datepicker.css' type='text/css' media='all' />
+    <script type='text/javascript' src='js/add-to-cart.min.js'></script>
+    <script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='js/woocommerce.min.js'></script>
+    <script type='text/javascript' src='js/jquery.cookie.min.js'></script>
+    <script type='text/javascript' src='js/cart-fragments.min.js'></script>
+    <script type='text/javascript' src='js/combined.js'></script>
+    <script type='text/javascript' src='js/core.min.js'></script>
+    <script type='text/javascript' src='js/datepicker.min.js'></script>
+    <script type='text/javascript' src='js/custom-date.js'></script>
+    <script type='text/javascript' src='js/jquery.timepicker.js'></script>
+    <script type='text/javascript' src='js/custom-time.js'></script>
+    <script type='text/javascript' src='js/jquery.validate.js'></script>
+    <script type='text/javascript' src='js/script-reservation-form.php'></script>
+    <script type='text/javascript' src='js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='js/script-demo.php'></script>
+    <script type='text/javascript' src='js/custom_onepage.js'></script>
+    <script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
+    <script type='text/javascript' src='js/sciprt-testimonials-flexslider.php'></script>
+</body>
+
+</html>

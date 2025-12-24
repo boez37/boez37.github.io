@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <title>Наш интерьер - Кафе ПолПути</title>
+    <style type="text/css">
+    img.wp-smiley,img.emoji { display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0 .07em !important; vertical-align: -0.1em !important; background: none !important; padding: 0 !important;}
+    </style>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Kristi' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-layout.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/combined.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/custom-css.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato%3A100%2C200%2C300%2C400%2C600%2C700%2C800%2C900%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/kirki-styles.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive-css.css' type='text/css' media='all' />
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.revolution.min.js'></script>
+    <script type="text/javascript">
+            jQuery(document).ready(function() {
+                // CUSTOM AJAX CONTENT LOADING FUNCTION
+                var ajaxRevslider = function(obj) {
+
+                    // obj.type : Post Type
+                    // obj.id : ID of Content to Load
+                    // obj.aspectratio : The Aspect Ratio of the Container / Media
+                    // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+
+                    var content = "";
+
+                    data = {};
+
+                    data.action = 'revslider_ajax_call_front';
+                    data.client_action = 'get_slider_html';
+                    data.token = '190cd98abe';
+                    data.type = obj.type;
+                    data.id = obj.id;
+                    data.aspectratio = obj.aspectratio;
+
+                    // SYNC AJAX REQUEST
+                    jQuery.ajax({
+                        type:"post",
+                        url:"",
+                        dataType: 'json',
+                        data:data,
+                        async:false,
+                        success: function(ret, textStatus, XMLHttpRequest) {
+                            if(ret.success == true)
+                                content = ret.data;
+                        },
+                        error: function(e) {
+                            console.log(e);
+                        }
+                    });
+
+                     // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                     return content;
+                };
+
+                // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+                var ajaxRemoveRevslider = function(obj) {
+                    return jQuery(obj.selector+" .rev_slider").revkill();
+                };
+
+                // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+                var extendessential = setInterval(function() {
+                    if (jQuery.fn.tpessential != undefined) {
+                        clearInterval(extendessential);
+                        if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+                            jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});
+                            // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+                            // func: the Function Name which is Called once the Item with the Post Type has been clicked
+                            // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+                            // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+                        }
+                    }
+                },30);
+            });
+    </script>
+</head>
+<body class="page page-template-default">
+  <input type="hidden" id="pp_menu_layout" name="pp_menu_layout" />
+  <input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" />
+  <input type="hidden" id="pp_enable_dragging" name="pp_enable_dragging" />
+  <input type="hidden" id="pp_ajax_search" name="pp_ajax_search" value="1" />
+  <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1" />
+  <input type="hidden" id="pp_topbar" name="pp_topbar" value="1" />
+  <input type="hidden" id="post_client_column" name="post_client_column" value="4" />
+  <input type="hidden" id="pp_back" name="pp_back" value="Back" />
+  <input type="hidden" id="pp_page_title_img_blur" name="pp_page_title_img_blur" value="1" />
+  <input type="hidden" id="tg_project_filterable_link" name="tg_project_filterable_link" />
+  <input type="hidden" id="pp_footer_style" name="pp_footer_style" value="4" />
+  <div class="mobile_menu_wrapper">
+      <a id="close_mobile_menu" href="javascript:;"><i class="fa fa-close"></i></a>
+      <form role="search" method="get" name="searchform" id="searchform" action="galery.html#">
+          <div>
+              <input type="text" name="s" id="s" autocomplete="off" placeholder="Поиск..." />
+              <button> <i class="fa fa-search"></i> </button>
+          </div>
+          <div id="autocomplete"></div>
+      </form>
+
+      <div class="menu-side-menu-container">
+          <ul id="mobile_main_menu" class="mobile_main_nav">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="menu.html">Меню</a>
+              <li><a href="galery.html">Интерьер</a></li>
+              <li><a href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=" target="_blank">Схема проезда</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+      </div>
+      <div class="page_content_wrapper">
+          <div class="sidebar_wrapper">
+              <div class="sidebar">
+                  <div class="content">
+                      <ul class="sidebar_widget">
+                          
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--div class="hasbg"-->
+  <div id="wrapper" class="hasbg">
+
+      <div class="header_style_wrapper">
+          <div class="above_top_bar">
+              <div class="page_content_wrapper">
+                  <div class="social_wrapper">
+                      <ul>
+                          <li class="facebook"><a target="_blank" href="galery.html#"><i class="fa fa-facebook"></i></a></li>
+                          <li class="twitter"><a target="_blank" href="galery.html#"><i class="fa fa-twitter"></i></a></li>
+                          <li class="flickr"><a target="_blank" title="Flickr" href="galery.html#"><i class="fa fa-flickr"></i></a></li>
+                          <li class="youtube"><a target="_blank" title="Youtube" href="galery.html#"><i class="fa fa-youtube"></i></a></li>
+                          <li class="google"><a target="_blank" title="Google+" href="galery.html#"><i class="fa fa-google-plus"></i></a></li>
+                          <li class="pinterest"><a target="_blank" title="Pinterest" href="galery.html#"><i class="fa fa-pinterest"></i></a></li>
+                          <li class="instagram"><a target="_blank" title="Instagram" href="galery.html#"><i class="fa fa-instagram"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="menu-top-menu-container">
+                      <ul id="top_menu" class="top_nav">
+                          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html">Меню</a></li>
+                          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://www.google.ru/maps/dir//Polputi,+368км+трассы+М-10+Москва+-+Санкт-Петербург,+Novgorodskaya+oblast',+175429/@57.9278123,33.5793882,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b9be161c849f1f:0x725145b6d621a874!2m2!1d33.5815769!2d57.9278123!3e0?dcr=0">Схема проезда Гугл.Карты</a></li>
+                          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">Схема проезда Яндекс.Карты</a></li>
+                      </ul>
+                  </div>
+                  <div class="extend_top_contact_info top_contact_info">
+                      <span id="top_contact_address"><i class="fa fa-map-marker"></i><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">368км трассы М-10</a></span>
+                      <span id="top_contact_number"><a href="tel:+79116220004"><i class="fa fa-phone"></i>+7 (911) 622-00-04</a></span></div>
+              </div>
+          </div>
+
+          <!-- <div class="top_bar hasbg" style="height: 96px;"> -->
+<div class="top_bar " style="height: 96px;">
+              <div id="menu_wrapper">
+                  <div id="logo_normal" class="logo_container">
+                      <div class="logo_align">
+                          <a id="custom_logo" class="logo_wrapper hidden" href="galery.html#" style="">
+                              <img src="images/bp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                          </a>
+                      </div>
+                  </div>
+                  <div id="logo_transparent" class="logo_container">
+                      <div class="logo_align">
+                          <a id="custom_logo_transparent" class="logo_wrapper default" href="index.html" style="">
+                              <img src="images/bp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="menu_buttons_container">
+
+                      <div class="menu_buttons_content">
+                          <a href="galery.html#" id="mobile_nav_icon"></a>
+                      </div>
+                  </div>
+
+                  <div id="nav_wrapper">
+                      <div class="nav_wrapper_inner">
+                          <div id="menu_border_wrapper">
+                              <div class="menu-main-menu-container">
+                                  <ul id="main_menu" class="nav">
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index.html" style="padding-top: 37px; padding-bottom: 38px;">Главная</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about.html" style="padding-top: 37px; padding-bottom: 38px;">О нас</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html" style="padding-top: 37px; padding-bottom: 38px;">Меню</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="galery.html" style="padding-top: 37px; padding-bottom: 38px;">Интерьер</a></li>
+                                      <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contacts.html" style="padding-top: 37px; padding-bottom: 38px;">Контакты</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="reservation_wrapper">
+          <div class="reservation_content">
+              <div class="reservation_form">
+                  <div class="reservation_form_wrapper"> <a id="reservation_cancel_btn" href="javascript:;"><i class="fa fa-close"></i></a>
+                      <div id="reponse_msg">
+                          <ul></ul>
+                      </div>
+                      <form id="tg_reservation_form" method="post">
+                          <input type="hidden" id="action" name="action" value="tg_reservation_mailer" />
+                          <div class="one_third">
+                              <label for="your_name">Имя*</label>
+                              <input id="your_name" name="your_name" type="text" class="required_field" />
+                          </div>
+                          <div class="one_third">
+                              <label for="email">Email*</label>
+                              <input id="email" name="email" type="text" class="required_field" />
+                          </div>
+                          <div class="one_third last">
+                              <label for="phone">Телефон*</label>
+                              <input id="phone" name="phone" type="text" class="required_field" />
+                          </div>
+                          <br class="clear" />
+                          <br/>
+                          <div class="one_third">
+                              <label for="date" class="hidden">Дата*</label>
+                              <input type="text" class="pp_date required_field" id="date" name="date" value="12/12/2015">
+                          </div>
+                          <div class="one_third">
+                              <label for="time">Время*</label>
+                              <input type="text" class="pp_time required_field" id="time" name="time" value="18:00" />
+                          </div>
+                          <div class="one_third last">
+                              <label for="seats">Количество персон*</label>
+                              <select id="seats" name="seats" class="required_field" style="width:99%">
+                                  <option value="1">1-2 персоны</option>
+                                  <option value="2">2-5 персон</option>
+                                  <option value="3">5-10 персон</option>
+                                  <option value="4">10-15 персон</option>
+                                  <option value="5">15-25 персон</option>
+                                  <option value="6">25-50 персон</option>
+                              </select>
+                          </div>
+                          <br class="clear" />
+                          <br/>
+                          <div class="one">
+                              <label for="message">Ваши пожелания</label>
+                              <textarea id="message" name="message" rows="7" cols="10"></textarea>
+                          </div>
+                          <br class="clear" />
+                          <br/>
+                          <div class="one">
+                          </div>
+                          <br class="clear" />
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="parallax_overlay_header"></div>
+      </div>
+
+        <div id="page_caption">
+            <div class="page_title_wrapper">
+                <div class="page_title_inner">
+                    <h1>Интерьер</h1>
+                </div><br class="clear">
+            </div>
+        </div>
+        <div class="ppb_wrapper">
+            <div class="one">
+                <div class="photo_wall_wrapper shortcode">
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3304.jpg">
+                            <img alt="" src="images/galery/_3304.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3542.jpg">
+                            <img alt="" src="images/galery/_3542.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3587.jpg">
+                            <img alt="" src="images/galery/_3587.jpg"></a>
+                        </div>
+                    </div><!--
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="/images/galery/IMG_3639.jpg">
+                            <img alt="" src="/images/galery/_3639.jpg"></a>
+                        </div>
+                    </div>-->
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3687.jpg">
+                            <img alt="" src="images/galery/_3687.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3776.jpg">
+                              <img alt="" src="images/galery/_3776.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="https://polputi.com/images/galery/IMG_3868.jpg">
+                            <img alt="" src="images/galery/_3868.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3925.jpg">
+                              <img alt="" src="images/galery/_3925.jpg"></a>
+
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3929.jpg">
+                            <img alt="" src="images/galery/_3929.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3986.jpg">
+                            <img alt="" src="images/galery/_3986.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3989.jpg">
+                            <img alt="" src="images/galery/_3989.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_3993.jpg">
+                            <img alt="" src="images/galery/_3993.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4017.jpg">
+                            <img alt="" src="images/galery/_4017.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4029.jpg">
+                            <img alt="" src="images/galery/_4029.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4063.jpg">
+                              <img alt="" src="images/galery/_4063.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4069.jpg">
+                            <img alt="" src="images/galery/_4069.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4071.jpg">
+                            <img alt="" src="images/galery/_4071.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4831.jpg">
+                              <img src="images/galery/_4831.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4832.jpg">
+                            <img alt="" src="images/galery/_4832.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4839.jpg">
+                            <img alt="" src="images/galery/_4839.jpg"></a>
+                        </div>
+                    </div>
+
+
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4862.jpg">
+                            <img alt="" src="images/galery/_4862.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4863.jpg">
+                            <img alt="" src="images/galery/_4863.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4880.jpg">
+                            <img alt="" src="images/galery/_4880.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4901.jpg">
+                            <img alt="" src="images/galery/_4901.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4915.jpg">
+                            <img alt="" src="images/galery/_4915.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4922.jpg">
+                            <img alt="" src="images/galery/_4922.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4943.jpg">
+                            <img alt="" src="images/galery/_4943.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4947.jpg">
+                            <img alt="" src="images/galery/_4947.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4951.jpg">
+                            <img alt="" src="images/galery/_4951.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4954.jpg">
+                            <img alt="" src="images/galery/_4954.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4960.jpg">
+                            <img alt="" src="images/galery/_4960.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_4974.jpg">
+                            <img alt="" src="images/galery/_4974.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_5033.jpg">
+                            <img alt="" src="images/galery/_5033.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_5048.jpg">
+                            <img alt="" src="images/galery/_5048.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_5063.jpg">
+                            <img alt="" src="images/galery/_5063.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_8943.jpg">
+                            <img alt="" src="images/galery/_8943.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_8952.jpg">
+                            <img alt="" src="images/galery/_8952.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_8964.jpg">
+                            <img alt="" src="images/galery/_8964.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_9020.jpg">
+                            <img alt="" src="images/galery/_9020.jpg"></a>
+                        </div>
+                    </div>
+                   <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_8947.jpg">
+                            <img alt="" src="images/galery/_8947.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="wall_entry">
+                         <div class="wall_thumbnail">
+                             <a class="fancy-gallery" href="images/galery/IMG_3547.jpg">
+                             <img alt="" src="images/galery/_3547.jpg"></a>
+                         </div>
+                     </div>
+                    <div class="wall_entry">
+                        <div class="wall_thumbnail">
+                            <a class="fancy-gallery" href="images/galery/IMG_9044.jpg">
+                            <img alt="" src="images/galery/_9044.jpg"></a>
+                        </div>
+                    </div>
+
+                </div><br class="clear">
+            </div>
+        </div>
+        <div class="footer_bar ">
+            <div id="footer_before_widget_text"></div>
+            <div id="footer">
+                <ul class="sidebar_widget four">
+                    <li id="text-13" class="widget widget_text">
+                        <div class="textwidget">
+													<p><img src="images/wp.png" alt="" height="68" /></p>
+													<p>Вкусно и по домашнему. Всегда свежие продукты и самые низкие цены. Заезжайте и убедитесь сами!
+															<br/>
+															<br/>
+													</p>
+                            <div class="social_wrapper shortcode dark ">
+                                <ul>
+                                    <li class="twitter"><a target="_blank" title="Twitter" href="http://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="vk"><a target="_blank" title="VK" href="http://vk.com/#"><i class="fa fa-vk"></i></a></li>
+                                    <li class="Facebook"><a target="_blank" title="Facebook" href="http://Facebook.com/#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="instagram"><a target="_blank" title="Instagram" href="http://instagram.com/#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+										
+										
+                   
+                    </li>
+										<li id="text-14" class="widget widget_text">
+                        <h2 class="widgettitle">Контакты</h2>
+                        <div class="textwidget">
+                            <p><i class="fa fa-map-marker marginright"></i>368км трассы М-10 Москва - Санкт-Петербург</p>
+                            <p><i class="fa fa-phone marginright"></i><a href="tel:+79116220004">+7 (911) 622-00-04</a></p>
+                            <p><i class="fa fa-globe marginright"></i>polputi.com</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br class="clear" />
+            <div class="footer_bar_wrapper ">
+                <div class="menu-footer-menu-container">
+									<ul id="footer_menu" class="footer_nav">
+											<li id="menu-item-4021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4021">
+													<a href="galery.html#">О нас</a>
+											</li>
+											<li id="menu-item-4023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4023">
+													<a href="galery.html#">Шеф повар</a>
+											</li>
+											<li id="menu-item-4022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4022">
+													<a href="galery.html#">Новости</a>
+											</li>
+											<li id="menu-item-4024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4024">
+													<a href="galery.html#">Страницы</a>
+											</li>
+									</ul>
+                </div>
+                <div id="copyright">© Кафе на ПолПути от Питера до Москвы.</div>
+                <br class="clear" /> <a id="toTop"><i class="fa fa-angle-up"></i></a> </div>
+        </div>
+    </div>
+    <div id="overlay_background"></div>
+
+    <link rel='stylesheet' id='jquery.timepicker-css' href='css/jquery.timepicker.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='datepicker-css' href='css/datepicker.css' type='text/css' media='all' />
+    <script type='text/javascript' src='js/add-to-cart.min.js'></script>
+    <script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='js/woocommerce.min.js'></script>
+    <script type='text/javascript' src='js/jquery.cookie.min.js'></script>
+    <script type='text/javascript' src='js/cart-fragments.min.js'></script>
+    <script type='text/javascript' src='js/combined.js'></script>
+    <script type='text/javascript' src='js/core.min.js'></script>
+    <script type='text/javascript' src='js/datepicker.min.js'></script>
+    <script type='text/javascript' src='js/custom-date.js'></script>
+    <script type='text/javascript' src='js/jquery.timepicker.js'></script>
+    <script type='text/javascript' src='js/custom-time.js'></script>
+    <script type='text/javascript' src='js/jquery.validate.js'></script>
+    <script type='text/javascript' src='js/script-reservation-form.php'></script>
+    <script type='text/javascript' src='js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='js/script-demo.php'></script>
+    <script type='text/javascript' src='js/custom_onepage.js'></script>
+    <script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
+    <script type='text/javascript' src='js/sciprt-testimonials-flexslider.php'></script>
+</body>
+
+</html>

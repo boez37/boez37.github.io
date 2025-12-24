@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en-US" data-menu="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Меню кафе ПолПути, Меню кафе на М10</title>
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "http:\/\/s.w.org\/images\/core\/emoji\/72x72\/",
+            "ext": ".png",
+            "source": {
+                "concatemoji": "\/js\/wp-emoji-release.min.js"
+            }
+        };
+        ! function(a, b, c) {
+            function d(a) {
+                var c = b.createElement("canvas"),
+                    d = c.getContext && c.getContext("2d");
+                return d && d.fillText ? (d.textBaseline = "top", d.font = "600 32px Arial", "flag" === a ? (d.fillText(String.fromCharCode(55356, 56812, 55356, 56807), 0, 0), c.toDataURL().length > 3e3) : (d.fillText(String.fromCharCode(55357, 56835), 0, 0), 0 !== d.getImageData(16, 16, 1, 1).data[0])) : !1
+            }
+
+            function e(a) {
+                var c = b.createElement("script");
+                c.src = a, c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+            var f, g;
+            c.supports = {
+                simple: d("simple"),
+                flag: d("flag")
+            }, c.DOMReady = !1, c.readyCallback = function() {
+                c.DOMReady = !0
+            }, c.supports.simple && c.supports.flag || (g = function() {
+                c.readyCallback()
+            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function() {
+                "complete" === b.readyState && c.readyCallback()
+            })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' href='css/settings.css' type='text/css' media='all' />
+    <style type='text/css'>
+        .tp-caption a {
+            color: #ff7302;
+            text-shadow: none;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out
+        }
+
+        .tp-caption a:hover {
+            color: #ffa902
+        }
+    </style>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Kristi' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-layout.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/combined.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/custom-css.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato%3A100%2C200%2C300%2C400%2C600%2C700%2C800%2C900%2C400italic&#038;subset=latin%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/kirki-styles.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/responsive-css.css' type='text/css' media='all' />
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='js/jquery.themepunch.revolution.min.js'></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            // CUSTOM AJAX CONTENT LOADING FUNCTION
+            var ajaxRevslider = function(obj) {
+
+                // obj.type : Post Type
+                // obj.id : ID of Content to Load
+                // obj.aspectratio : The Aspect Ratio of the Container / Media
+                // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+
+                var content = "";
+
+                data = {};
+
+                data.action = 'revslider_ajax_call_front';
+                data.client_action = 'get_slider_html';
+                data.token = 'e41d2033eb';
+                data.type = obj.type;
+                data.id = obj.id;
+                data.aspectratio = obj.aspectratio;
+
+                // SYNC AJAX REQUEST
+                jQuery.ajax({
+                    type: "post",
+                    url: "#",
+                    dataType: 'json',
+                    data: data,
+                    async: false,
+                    success: function(ret, textStatus, XMLHttpRequest) {
+                        if (ret.success == true)
+                            content = ret.data;
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    }
+                });
+
+                // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                return content;
+            };
+
+            // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+            var ajaxRemoveRevslider = function(obj) {
+                return jQuery(obj.selector + " .rev_slider").revkill();
+            };
+
+            // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+            var extendessential = setInterval(function() {
+                if (jQuery.fn.tpessential != undefined) {
+                    clearInterval(extendessential);
+                    if (typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+                        jQuery.fn.tpessential.defaults.ajaxTypes.push({
+                            type: "revslider",
+                            func: ajaxRevslider,
+                            killfunc: ajaxRemoveRevslider,
+                            openAnimationSpeed: 0.3
+                        });
+                        // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+                        // func: the Function Name which is Called once the Item with the Post Type has been clicked
+                        // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+                        // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+                    }
+                }
+            }, 30);
+        });
+    </script>
+</head>
+
+<body class="page page-template-default">
+    <input type="hidden" id="pp_menu_layout" name="pp_menu_layout" />
+    <input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" />
+    <input type="hidden" id="pp_enable_dragging" name="pp_enable_dragging" />
+    <input type="hidden" id="pp_ajax_search" name="pp_ajax_search" value="1" />
+    <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1" />
+    <input type="hidden" id="pp_topbar" name="pp_topbar" value="1" />
+    <input type="hidden" id="post_client_column" name="post_client_column" value="4" />
+    <input type="hidden" id="pp_back" name="pp_back" value="Back" />
+    <input type="hidden" id="pp_page_title_img_blur" name="pp_page_title_img_blur" value="1" />
+    <input type="hidden" id="tg_project_filterable_link" name="tg_project_filterable_link" />
+    <input type="hidden" id="pp_footer_style" name="pp_footer_style" value="4" />
+    <div class="mobile_menu_wrapper">
+        <a id="close_mobile_menu" href="javascript:;"><i class="fa fa-close"></i></a>
+        <form role="search" method="get" name="searchform" id="searchform" action="menu.html#">
+            <div>
+                <input type="text" name="s" id="s" autocomplete="off" placeholder="Поиск..." />
+                <button> <i class="fa fa-search"></i> </button>
+            </div>
+            <div id="autocomplete"></div>
+        </form>
+
+        <div class="menu-side-menu-container">
+            <ul id="mobile_main_menu" class="mobile_main_nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="menu.html">Меню</a>
+                <li><a href="galery.html">Интерьер</a></li>
+                <li><a href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=" target="_blank">Схема проезда</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <a href="javascript:;" id="tg_sidemenu_reservation" class="button">Запрос</a>
+        <div class="page_content_wrapper">
+            <div class="sidebar_wrapper">
+                <div class="sidebar">
+                    <div class="content">
+                        <ul class="sidebar_widget">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="hasbg">
+
+        <div class="header_style_wrapper">
+            <div class="above_top_bar">
+                <div class="page_content_wrapper">
+                    <div class="social_wrapper">
+                        <ul>
+                            <li class="facebook"><a target="_blank" href="menu.html#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="twitter"><a target="_blank" href="menu.html#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="flickr"><a target="_blank" title="Flickr" href="menu.html#"><i class="fa fa-flickr"></i></a></li>
+                            <li class="youtube"><a target="_blank" title="Youtube" href="menu.html#"><i class="fa fa-youtube"></i></a></li>
+                            <li class="google"><a target="_blank" title="Google+" href="menu.html#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="pinterest"><a target="_blank" title="Pinterest" href="menu.html#"><i class="fa fa-pinterest"></i></a></li>
+                            <li class="instagram"><a target="_blank" title="Instagram" href="menu.html#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-top-menu-container">
+                        <ul id="top_menu" class="top_nav">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html">Меню</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://www.google.ru/maps/dir//Polputi,+368км+трассы+М-10+Москва+-+Санкт-Петербург,+Novgorodskaya+oblast',+175429/@57.9278123,33.5793882,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b9be161c849f1f:0x725145b6d621a874!2m2!1d33.5815769!2d57.9278123!3e0?dcr=0">Схема проезда Гугл.Карты</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">Схема проезда Яндекс.Карты</a></li>
+                        </ul>
+                    </div>
+                    <div class="extend_top_contact_info top_contact_info">
+                        <span id="top_contact_address"><i class="fa fa-map-marker"></i><a target="_blank" href="https://yandex.ru/maps/?source=serp_navig&mode=routes&ll=33.580984%2C57.927936&z=13&rtext=~57.927935%2C33.580982&rtt=auto&ol=biz&oid=31444968356&via=">368км трассы М-10</a></span>
+                        <span id="top_contact_number"><a href="tel:+79116220004"><i class="fa fa-phone"></i>+7 (911) 622-00-04</a></span></div>
+                </div>
+            </div>
+
+            <div class="top_bar hasbg" style="height: 96px;">
+                <div id="menu_wrapper">
+                    <div id="logo_normal" class="logo_container">
+                        <div class="logo_align">
+                            <a id="custom_logo" class="logo_wrapper hidden" href="menu.html#" style="">
+                                <img src="images/bp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="logo_transparent" class="logo_container">
+                        <div class="logo_align">
+                            <a id="custom_logo_transparent" class="logo_wrapper default" href="index.html" style="">
+                                <img src="images/wp.png" style="width: auto; max-width: 120px; max-height: 32px;">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="menu_buttons_container">
+
+                        <div class="menu_buttons_content">
+                            <a href="javascript:;" id="tg_reservation" class="button">Запрос</a>
+                            <a href="menu.html#" id="mobile_nav_icon"></a>
+                        </div>
+                    </div>
+
+                    <div id="nav_wrapper">
+                        <div class="nav_wrapper_inner">
+                            <div id="menu_border_wrapper">
+                                <div class="menu-main-menu-container">
+                                    <ul id="main_menu" class="nav">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index.html" style="padding-top: 37px; padding-bottom: 38px;">Главная</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about.html" style="padding-top: 37px; padding-bottom: 38px;">О нас</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="menu.html" style="padding-top: 37px; padding-bottom: 38px;">Меню</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="galery.html" style="padding-top: 37px; padding-bottom: 38px;">Интерьер</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contacts.html" style="padding-top: 37px; padding-bottom: 38px;">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reservation_wrapper">
+            <div class="reservation_content">
+                <div class="reservation_form">
+                    <div class="reservation_form_wrapper"> <a id="reservation_cancel_btn" href="javascript:;"><i class="fa fa-close"></i></a>
+                        <h2 class="ppb_title"><span class="ppb_title_first" >Запрос</span>столик</h2>
+                        <div id="reponse_msg">
+                            <ul></ul>
+                        </div>
+                        <form id="tg_reservation_form" method="post">
+                            <input type="hidden" id="action" name="action" value="tg_reservation_mailer" />
+                            <div class="one_third">
+                                <label for="your_name">Имя*</label>
+                                <input id="your_name" name="your_name" type="text" class="required_field" />
+                            </div>
+                            <div class="one_third">
+                                <label for="email">Email*</label>
+                                <input id="email" name="email" type="text" class="required_field" />
+                            </div>
+                            <div class="one_third last">
+                                <label for="phone">Телефон*</label>
+                                <input id="phone" name="phone" type="text" class="required_field" />
+                            </div>
+                            <br class="clear" />
+                            <br/>
+                            <div class="one_third">
+                                <label for="date" class="hidden">Дата*</label>
+                                <input type="text" class="pp_date required_field" id="date" name="date" value="12/12/2015">
+                            </div>
+                            <div class="one_third">
+                                <label for="time">Время*</label>
+                                <input type="text" class="pp_time required_field" id="time" name="time" value="18:00" />
+                            </div>
+                            <div class="one_third last">
+                                <label for="seats">Количество персон*</label>
+                                <select id="seats" name="seats" class="required_field" style="width:99%">
+                                    <option value="1">1-2 персоны</option>
+                                    <option value="2">2-5 персон</option>
+                                    <option value="3">5-10 персон</option>
+                                    <option value="4">10-15 персон</option>
+                                    <option value="5">15-25 персон</option>
+                                    <option value="6">25-50 персон</option>
+                                </select>
+                            </div>
+                            <br class="clear" />
+                            <br/>
+                            <div class="one">
+                                <label for="message">Ваши пожелания</label>
+                                <textarea id="message" name="message" rows="7" cols="10"></textarea>
+                            </div>
+                            <br class="clear" />
+                            <br/>
+                            <div class="one">
+                                <p><input id="reservation_submit_btn" type="submit" value="Запрос" /></p>
+                            </div>
+                            <br class="clear" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax_overlay_header"></div>
+        </div>
+
+        <div id="page_caption" class="hasbg parallax">
+            <div class="parallax_overlay_header"></div>
+            <div id="bg_regular" style="background-image:url(images/obed.jpg);"></div>
+            <div id="bg_blurred" style="background-image:url(images/obed.jpg);"></div>
+            <div class="page_title_wrapper" data-stellar-ratio="1.3">
+                <div class="page_title_inner">
+                    <h1 class="withtopbar"> <span class="ppb_title_first" >Наше</span>Меню </h1> </div>
+            </div>
+        </div>
+        <div class="ppb_wrapper hasbg withtopbar">
+            <div class="one" style="padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div style="margin:auto;width:100%;text-align:center;">
+                                <h2 class="ppb_menu_title">Завтраки <!--(до 11:00 часов)--></h2>
+                                <br class="clear" />
+                                <br/>
+                                <div class="one_half ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Сырники со сметаной / сгущенкой</span> <span class="menu_dots"></span> <span class="menu_price">78 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/180/50</div>
+                                    </div>
+                                </div>
+                                <div class="one_half last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Яичница из трёх яиц с колбасой</span> <span class="menu_dots"></span> <span class="menu_price">80 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/120/40</div>
+                                    </div>
+                                </div>
+                                <div class="one_half ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Блинчики со сметаной / сгущенкой</span> <span class="menu_dots"></span> <span class="menu_price">60 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/160/50</div>
+                                    </div>
+                                </div>
+                                <div class="one_half last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Каша овсяная</span> <span class="menu_dots"></span> <span class="menu_price">50 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/400</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="one_half ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Сметана в стакане</span> <span class="menu_dots"></span> <span class="menu_price">50 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_half last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Сосиска</span> <span class="menu_dots"></span> <span class="menu_price">35 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1 шт. 1/60</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="one_half ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Яичница глазунья</span> <span class="menu_dots"></span> <span class="menu_price">20 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/40/5</div>
+                                    </div>
+                                </div>
+                                <div class="one_half last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Яйцо отварное</span> <span class="menu_dots"></span> <span class="menu_price">20 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/40</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax title" data-image="images/galery/banner_2.jpg" data-width="1800" data-height="1200" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Салаты и </span>холодные закуски</h2></div>
+            </div>
+            <div class="ppb_portfolio one nopadding " style="padding:0px 0 0px 0;">
+                <div class="page_content_wrapper fullwidth">
+                    <div class="portfolio_filter_wrapper four_cols gallery portfolio-content section content clearfix">
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated1">
+                                <a data-title="" href="images/content/menu_litle_30.jpg" class="fancy-gallery"><img src="images/content/menu_litle_30.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3190" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Салат «Нежность»</span> <span class="menu_dots"></span> <span class="menu_price">89 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated2">
+                                <a data-title="" href="images/content/menu_litle_23.jpg" class="fancy-gallery"><img src="images/content/menu_litle_23.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3191" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Нарезка овощная</span> <span class="menu_dots"></span> <span class="menu_price">80 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated3">
+                                <a data-title="" href="images/content/menu_litle_32.jpg" class="fancy-gallery"><img src="images/content/menu_litle_32.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3192" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Оливье</span> <span class="menu_dots"></span> <span class="menu_price">68 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated4">
+                                <a data-title="" href="images/content/menu_litle_28.jpg" class="fancy-gallery"><img src="images/content/menu_litle_28.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3193" class="portfolio_desc portfolio4 filterable last">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Селёдочка с картофелем</span> <span class="menu_dots"></span> <span class="menu_price">45356344553 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated5">
+                                <a data-title="" href="images/content/menu_litle_10.jpg" class="fancy-gallery"><img src="images/content/menu_litle_10.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3194" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Салат «Сытный»</span> <span class="menu_dots"></span> <span class="menu_price">70 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_33.jpg" class="fancy-gallery"><img src="images/content/menu_litle_33.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3195" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Сельдь под шубой</span> <span class="menu_dots"></span> <span class="menu_price">60 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated7">
+                                <a data-title="" href="images/content/menu_litle_26.jpg" class="fancy-gallery"><img src="images/content/menu_litle_26.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3196" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Винегрет</span> <span class="menu_dots"></span> <span class="menu_price">45 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated8">
+                                <a data-title="" href="images/content/menu_litle_29.jpg" class="fancy-gallery"><img src="images/content/menu_litle_29.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3197" class="portfolio_desc portfolio4 filterable last">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Салат из свежей капусты</span> <span class="menu_dots"></span> <span class="menu_price">38 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated7">
+                                <a data-title="" href="images/content/menu_litle_9.jpg" class="fancy-gallery"><img src="images/content/menu_litle_9.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3196" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Свекла с чесноком и майонезом</span> <span class="menu_dots"></span> <span class="menu_price">38 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/150</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated7">
+                                <a data-title="" href="https://polputi.com/images/menu/menu_litle_35.jpg" class="fancy-gallery"><img src="images/content/menu_litle_35.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3196" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Яйцо под майонезом</span> <span class="menu_dots"></span> <span class="menu_price">38 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/40/30</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated7">
+                                <a data-title="" href="images/fructs.jpg" class="fancy-gallery"><img src="images/fructs.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3196" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Фрукты в ассортименте</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                    <div class="post_detail menu_excerpt"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax title" data-image="images/obed.jpg" data-width="1800" data-height="1200" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Наши</span>Первые блюда</h2></div>
+            </div>
+            <div class="ppb_portfolio one nopadding " style="padding:0px 0 0px 0;">
+                <div class="page_content_wrapper fullwidth">
+                    <div class="portfolio_filter_wrapper four_cols gallery portfolio-content section content clearfix">
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated1">
+                                <a data-title="" href="images/content/menu_litle_36.jpg" class="fancy-gallery"><img src="images/content/menu_litle_36.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3190" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Шурпа из баранины</span> <span class="menu_dots"></span> <span class="menu_price">160 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated2">
+                                <a data-title="" href="images/content/menu_litle_34.jpg" class="fancy-gallery"><img src="images/content/menu_litle_34.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3191" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Солянка сборная</span> <span class="menu_dots"></span> <span class="menu_price">125 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated3">
+                                <a data-title="" href="images/content/menu_litle_31.jpg" class="fancy-gallery"><img src="images/content/menu_litle_31.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3192" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Борщ</span> <span class="menu_dots"></span> <span class="menu_price">95 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated4">
+                                <a data-title="" href="images/content/menu_litle_25.jpg" class="fancy-gallery"><img src="images/content/menu_litle_25.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3193" class="portfolio_desc portfolio4 filterable last">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Суп грибной</span> <span class="menu_dots"></span> <span class="menu_price">75 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated5">
+                                <a data-title="" href="images/content/menu_litle_27.jpg" class="fancy-gallery"><img src="images/content/menu_litle_27.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3194" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Бульон куриный с лапшой</span> <span class="menu_dots"></span> <span class="menu_price">75 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/400</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_40.jpg" class="fancy-gallery"><img src="images/content/menu_litle_40.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3195" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Суп дня</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                    <div class="post_detail menu_excerpt"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax title" data-image="images/2bluda.jpg" data-width="1800" data-height="1200" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Наши</span>Вторые блюда</h2></div>
+            </div>
+            <div class="ppb_portfolio one nopadding " style="padding:0px 0 0px 0;">
+                <div class="page_content_wrapper fullwidth">
+                    <div class="portfolio_filter_wrapper four_cols gallery portfolio-content section content clearfix">
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated1">
+                                <a data-title="" href="images/content/menu_litle_24.jpg" class="fancy-gallery"><img src="images/content/menu_litle_24.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3190" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Стейк форели</span> <span class="menu_dots"></span> <span class="menu_price">240 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/200</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated2">
+                                <a data-title="" href="images/content/menu_litle_14.jpg" class="fancy-gallery"><img src="images/content/menu_litle_14.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3191" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Шашлык из свиной шеи</span> <span class="menu_dots"></span> <span class="menu_price">220 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/180</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated3">
+                                <a data-title="" href="images/content/menu_litle_22.jpg" class="fancy-gallery"><img src="images/content/menu_litle_22.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3192" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Свинина на косточке</span> <span class="menu_dots"></span> <span class="menu_price">198 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/180</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated4">
+                                <a data-title="" href="images/content/menu_litle_11.jpg" class="fancy-gallery"><img src="images/content/menu_litle_11.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3193" class="portfolio_desc portfolio4 filterable last">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Гуляш из говядины</span> <span class="menu_dots"></span> <span class="menu_price">146 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/100/60</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated5">
+                                <a data-title="" href="images/content/menu_litle_21.jpg" class="fancy-gallery"><img src="images/content/menu_litle_21.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3194" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Плов из свинины</span> <span class="menu_dots"></span> <span class="menu_price">140 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/300</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_12.jpg" class="fancy-gallery"><img src="images/content/menu_litle_12.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3195" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Поджарка свиная</span> <span class="menu_dots"></span> <span class="menu_price">136 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/100/60</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_20.jpg" class="fancy-gallery"><img src="images/content/menu_litle_20.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Стейк трески</span> <span class="menu_dots"></span> <span class="menu_price">128 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/180</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_22.jpg" class="fancy-gallery"><img src="images/content/menu_litle_22.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Куринная отбивная</span> <span class="menu_dots"></span> <span class="menu_price">125 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/120</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_15.jpg" class="fancy-gallery"><img src="images/content/menu_litle_15.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Бифштекс с яйцом</span> <span class="menu_dots"></span> <span class="menu_price">130 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/120/4</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_8.jpg" class="fancy-gallery"><img src="images/content/menu_litle_8.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Котлета свино-говяжья</span> <span class="menu_dots"></span> <span class="menu_price">120 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">2/60</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_18.jpg" class="fancy-gallery"><img src="images/content/menu_litle_18.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Окорок куриный</span> <span class="menu_dots"></span> <span class="menu_price">110 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/200</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_19.jpg" class="fancy-gallery"><img src="images/content/menu_litle_19.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Тефтели в соусе</span> <span class="menu_dots"></span> <span class="menu_price">85 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">2/200</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_11.jpg" class="fancy-gallery"><img src="images/content/menu_litle_11.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Шницель куриный рубленный</span> <span class="menu_dots"></span> <span class="menu_price">75 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/200</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_13.jpg" class="fancy-gallery"><img src="images/content/menu_litle_13.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Купаты</span> <span class="menu_dots"></span> <span class="menu_price">70 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/80</div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax title" data-image="images/garnir.jpg" data-width="1348" data-height="899" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Наши</span>Гарниры</h2></div>
+            </div>
+            <div class="one" style="padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div style="margin:auto;width:100%;text-align:center;">
+                                <h2 class="ppb_menu_title">вкусно по домашнему!</h2>
+                                <br class="clear" />
+                                <br/>
+                                <div class="one_half ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Пюре картофельное на молоке</span> <span class="menu_dots"></span> <span class="menu_price">45 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/170</div>
+                                    </div>
+                                </div>
+                                <div class="one_half last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Картофель по-деревенски</span> <span class="menu_dots"></span> <span class="menu_price">48 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/170</div>
+                                    </div>
+                                </div>
+                                <div class="one_half ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Капуста тушеная</span> <span class="menu_dots"></span> <span class="menu_price">40 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/170</div>
+                                    </div>
+                                </div>
+                                <div class="one_half last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Греча</span> <span class="menu_dots"></span> <span class="menu_price">35 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/170</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="one_half ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Рис</span> <span class="menu_dots"></span> <span class="menu_price">33 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/170</div>
+                                    </div>
+                                </div>
+                                <div class="one_half last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Макароны</span> <span class="menu_dots"></span> <span class="menu_price">30 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/170</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax title" data-image="images/hleb.jpg" data-width="1800" data-height="1200" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Еще у нас есть</span>Выпечка, хлеб</h2></div>
+            </div>
+            <div class="ppb_portfolio one nopadding " style="padding:0px 0 0px 0;">
+                <div class="page_content_wrapper fullwidth">
+                    <div class="portfolio_filter_wrapper four_cols gallery portfolio-content section content clearfix">
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated1">
+                                <a data-title="" href="images/content/menu_litle_4.jpg" class="fancy-gallery"><img src="images/content/menu_litle_4.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3190" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Сосиска в тесте</span> <span class="menu_dots"></span> <span class="menu_price">45 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1 шт.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated2">
+                                <a data-title="" href="images/content/menu_litle_34.jpg" class="fancy-gallery"><img src="images/content/menu_litle_34.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3191" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Пирожные в ассортименте</span> <span class="menu_dots"></span> <span class="menu_price">45 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1 шт.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated3">
+                                <a data-title="" href="images/content/menu_litle_31.jpg" class="fancy-gallery"><img src="images/content/menu_litle_31.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3192" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Бутерброд с сыром</span> <span class="menu_dots"></span> <span class="menu_price">45 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/20/30/15</div>
+                                    <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated4">
+                                <a data-title="" href="images/content/menu_litle_6.jpg" class="fancy-gallery"><img src="images/content/menu_litle_6.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3193" class="portfolio_desc portfolio4 filterable last">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Ватрушка с творогом</span> <span class="menu_dots"></span> <span class="menu_price">30 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1 шт.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated5">
+                                <a data-title="" href="images/content/menu_litle_27.jpg" class="fancy-gallery"><img src="images/content/menu_litle_27.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3194" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Слойка «Бантик»</span> <span class="menu_dots"></span> <span class="menu_price">30 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1 шт.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_40.jpg" class="fancy-gallery"><img src="images/content/menu_litle_40.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3195" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Булочка с сахаром</span> <span class="menu_dots"></span> <span class="menu_price">20 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1 шт.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_5.jpg" class="fancy-gallery"><img src="images/content/menu_litle_5.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3195" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Пирожок с картофелем / капустой</span> <span class="menu_dots"></span> <span class="menu_price">25 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1 шт.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element classic3_cols">
+                            <div class="one_fourth gallery4 filterable static animated6">
+                                <a data-title="" href="images/content/menu_litle_40.jpg" class="fancy-gallery"><img src="images/content/menu_litle_40.jpg" alt="" /></a>
+                            </div>
+                            <br class="clear" />
+                            <div id="portfolio_desc_3195" class="portfolio_desc portfolio4 filterable ">
+                                <div class="menu_content_classic">
+                                    <h5 class="menu_post"> <span class="menu_title">Хлеб чёрный / белый</span> <span class="menu_dots"></span> <span class="menu_price">3 р.</span> </h5>
+                                    <div class="post_detail menu_excerpt">1/30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax title" data-image="images/galery/drink.jpg" data-width="1348" data-height="899" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Наши</span>Напитки</h2></div>
+            </div>
+            <div class="one" style="padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div style="margin:auto;width:100%;text-align:center;">
+                                <h2 class="ppb_menu_title">Безалкогольное меню</h2>
+                                <br class="clear" />
+                                <br/>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Апельсиновый фреш</span> <span class="menu_dots"></span> <span class="menu_price">70 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Грейпфрутовый фреш</span> <span class="menu_dots"></span> <span class="menu_price">70 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Морковный фреш</span> <span class="menu_dots"></span> <span class="menu_price">70 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Клюквенный фреш</span> <span class="menu_dots"></span> <span class="menu_price">30 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Сок в ассортименте</span> <span class="menu_dots"></span> <span class="menu_price">30 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Компот из сухофруктов</span> <span class="menu_dots"></span> <span class="menu_price">20 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Кофе Американо</span> <span class="menu_dots"></span> <span class="menu_price">60 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Кофе Эспрессо</span> <span class="menu_dots"></span> <span class="menu_price">55 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/100</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Кофе растворимый</span> <span class="menu_dots"></span> <span class="menu_price">25 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Кофе 3 в 1 «Нескафе»</span> <span class="menu_dots"></span> <span class="menu_price">20 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/100</div>
+                                    </div>
+                                </div>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Чай в ассортименте</span> <span class="menu_dots"></span> <span class="menu_price">20 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Сливки порционные</span> <span class="menu_dots"></span> <span class="menu_price">10 р.</span> </h5>
+                                        <div class="post_detail menu_excerpt">1/10</div>
+                                        <div class="menu_highlight"><i class="fa fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parallax title" data-image="images/comobed.jpg" data-width="1348" data-height="899" data-content-height="60">
+                <div class="parallax_title">
+                    <h2 class="ppb_title"><span class="ppb_title_first" >Комплексный</span>Обед!</h2></div>
+            </div>
+            <div class="one" style="padding:50px 0 50px 0;">
+                <div class="standard_wrapper">
+                    <div class="page_content_wrapper">
+                        <div class="inner">
+                            <div style="margin:auto;width:100%;text-align:center;">
+                                <h2 class="ppb_menu_title"><div style="color:red;">199 р.</div></h2>
+                                <br class="clear" />
+                                <br/>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Салат из свежей капусты</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                        <div class="post_detail menu_excerpt">1/150</div>
+                                    </div>
+                                </div>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Куриный бульон с лапшой</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                        <div class="post_detail menu_excerpt">1/400</div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Тефтеля</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                        <div class="post_detail menu_excerpt">1шт. 1/80</div>
+                                    </div>
+                                </div>
+                                <div class="one_third ">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Макароны</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                        <div class="post_detail menu_excerpt">1/170</div>
+                                    </div>
+                                </div>
+                                <div class="one_third">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Компот</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                        <div class="post_detail menu_excerpt">1/200</div>
+                                    </div>
+                                </div>
+                                <div class="one_third last">
+                                    <div class="menu_content_classic">
+                                        <h5 class="menu_post"> <span class="menu_title">Хлеб</span> <span class="menu_dots"></span> <span class="menu_price"></span> </h5>
+                                        <div class="post_detail menu_excerpt">1/60</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer_bar ">
+            <div id="footer_before_widget_text"></div>
+            <div id="footer">
+                <ul class="sidebar_widget four">
+                    <li id="text-13" class="widget widget_text">
+                        <div class="textwidget">
+                            <p><img src="images/wp.png" alt="" height="68" /></p>
+                            <p>Вкусно и по домашнему. Всегда свежие продукты и самые низкие цены. Заезжайте и убедитесь сами!
+                                <br/>
+                                <br/>
+                            </p>
+                            <div class="social_wrapper shortcode dark ">
+                                <ul>
+                                    <li class="twitter"><a target="_blank" title="Twitter" href="http://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="vk"><a target="_blank" title="VK" href="http://vk.com/#"><i class="fa fa-vk"></i></a></li>
+                                    <li class="Facebook"><a target="_blank" title="Facebook" href="http://Facebook.com/#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="instagram"><a target="_blank" title="Instagram" href="http://instagram.com/#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                   
+                    
+                    <li id="text-14" class="widget widget_text">
+                        <h2 class="widgettitle">Контакты</h2>
+                        <div class="textwidget">
+                            <p><i class="fa fa-map-marker marginright"></i>368км трассы М-10 Москва - Санкт-Петербург</p>
+                            <p><i class="fa fa-phone marginright"></i><a href="tel:+79116220004">+7 (911) 622-00-04</a></p>
+                            <p><i class="fa fa-globe marginright"></i>polputi.com</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br class="clear" />
+            <div class="footer_bar_wrapper ">
+                <div class="menu-footer-menu-container">
+                    <ul id="footer_menu" class="footer_nav">
+                        <li id="menu-item-4021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4021">
+                            <a href="menu.html#">О нас</a>
+                        </li>
+                        <li id="menu-item-4023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4023">
+                            <a href="menu.html#">Шеф повар</a>
+                        </li>
+                        <li id="menu-item-4022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4022">
+                            <a href="menu.html#">Новости</a>
+                        </li>
+                        <li id="menu-item-4024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4024">
+                            <a href="menu.html#">Страницы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="copyright">© Кафе на ПолПути от Питера до Москвы.</div>
+                <br class="clear" /> <a id="toTop"><i class="fa fa-angle-up"></i></a> </div>
+        </div>
+    </div>
+    <div id="overlay_background"></div>
+
+    <link rel='stylesheet' href='css/jquery.timepicker.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/datepicker.css' type='text/css' media='all' />
+    <script type='text/javascript' src='js/add-to-cart.min.js'></script>
+    <script type='text/javascript' src='js/jquery.blockUI.min.js'></script>
+    <script type='text/javascript' src='js/woocommerce.min.js'></script>
+    <script type='text/javascript' src='js/jquery.cookie.min.js'></script>
+    <script type='text/javascript' src='js/cart-fragments.min.js'></script>
+    <script type='text/javascript' src='js/combined.js'></script>
+    <script type='text/javascript' src='js/core.min.js'></script>
+    <script type='text/javascript' src='js/datepicker.min.js'></script>
+    <script type='text/javascript' src='js/custom-date.js'></script>
+    <script type='text/javascript' src='js/jquery.timepicker.js'></script>
+    <script type='text/javascript' src='js/custom-time.js'></script>
+    <script type='text/javascript' src='js/jquery.validate.js'></script>
+    <script type='text/javascript' src='js/script-reservation-form.php'></script>
+    <script type='text/javascript' src='js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='js/script-demo.php'></script>
+    <script type='text/javascript' src='js/custom_onepage.js'></script>
+</body>
+
+</html>
